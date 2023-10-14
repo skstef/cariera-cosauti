@@ -1,0 +1,65 @@
+.section {
+}
+
+.sectionImage {
+  object-fit: cover;
+  width: 100vw;
+  max-width: 100%;
+}
+
+.textBoxWrapper {
+  position: absolute;
+  left: 150px;
+  top: 308px;
+}
+
+.textBox {
+  position: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 207, 122, 0.15) 0%,
+    rgba(232, 207, 122, 0.01) 54.48%
+  );
+  padding: 55px 0 55px 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background: #e8cf7a;
+    width: 8px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  & > h1 {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 6.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    margin: 0;
+
+    & > span {
+      color: #e8cf7a;
+    }
+  }
+
+  & > h3 {
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 4.375rem;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 100%; /* 70px */
+  }
+}
+
+.goToProductionBtn {
+  margin-top: 56px;
+  padding: 30px 60px;
+  background: #e8cf7a;
+  color: #212122;
+}
