@@ -1,0 +1,97 @@
+.section {
+  margin-top: 77px;
+  display: flex;
+  flex-direction: column;
+  min-height: 780px;
+  position: relative;
+}
+
+.sectionImage {
+  object-fit: cover;
+  width: 100vw;
+  max-width: 100%;
+  position: absolute;
+}
+
+.sectionHeader {
+  margin-top: 100px;
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  margin: 100px auto 0 auto;
+  padding-bottom: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 207, 122, 0.1) 0%,
+    rgba(232, 207, 122, 0.01) 58.31%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #e8cf7a;
+  }
+
+  h3 {
+    margin-left: 23px;
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+}
+
+.sectionSubTitle {
+  z-index: 2;
+  margin-top: 51px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 54px;
+  flex-wrap: wrap;
+  z-index: 2;
+  padding: 0 150px;
+  margin-top: 56px;
+}
+
+.card {
+  width: 360px;
+  height: 380px;
+  box-shadow: 0px 10px 36px 0px rgba(162, 162, 162, 0.5);
+  background: #161616;
+  padding: 13px 28px;
+  cursor: pointer;
+}
+
+.cardNumber {
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 3.75rem;
+  font-weight: 400;
+  display: inline-block;
+  line-height: 1;
+  padding-bottom: 32px;
+  border-bottom: 5px solid #e8cf7a;
+}
+
+.cardTitle {
+  margin-top: 20px;
+  color: #fff;
+  font-family: "Exo 2";
+  font-size: 1.62rem;
+  font-weight: 400;
+}
