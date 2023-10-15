@@ -7,6 +7,7 @@
   position: relative;
   display: inline-block;
   padding-bottom: 10px;
+  margin-bottom: 56px;
   background: linear-gradient(
     90deg,
     rgba(232, 207, 122, 0.1) 0%,
@@ -42,4 +43,15 @@
     font-weight: 500;
     line-height: 1.16;
   }
+}
+
+.imagesCarousel {
+  margin: 0 -150px;
+}
+
+.image {
+  width: 385px;
+  height: 385px;
+  pointer-events: none;
+  user-select: none;
 }

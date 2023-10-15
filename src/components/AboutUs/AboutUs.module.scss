@@ -1,7 +1,7 @@
 .section {
   display: flex;
   justify-content: space-between;
-  padding: 140px 150px;
+  padding: 140px 135px 140px 150px;
 }
 
 .aboutUsHeader {
@@ -29,12 +29,13 @@
     font-size: 3rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 110%;
+    line-height: 1;
     text-transform: uppercase;
 
     span {
       font-weight: 700;
       color: #e8cf7a;
+      font-size: 2.812rem;
     }
   }
 }
@@ -53,7 +54,7 @@
 }
 
 .btn {
-  padding: 15px 82px;
-  margin-top: 78px;
+  padding: 15px 79px;
+  margin-top: 82px;
   color: #191a19;
 }
