@@ -7,14 +7,14 @@ export const Header = () => {
     <header className={styles.header}>
       <Image alt="logo" src="/images/logo.webp" width={75} height={75} />
       <ul className={styles.topMenu}>
-        <li className={`${styles.menuItem} ${styles.menuItemActive}`}>
-          <a>Despre Noi</a>
+        <li className={styles.menuItem}>
+          <a href="#aboutUs">Despre Noi</a>
         </li>
         <li className={styles.menuItem}>
-          <a>Producția</a>
+          <a href="#production">Producția</a>
         </li>
         <li className={styles.menuItem}>
-          <a>Galeria</a>
+          <a href="#galery">Galeria</a>
         </li>
         <li className={styles.menuItem}>
           <a>Cadre</a>
@@ -23,7 +23,7 @@ export const Header = () => {
           <a>Parteneri</a>
         </li>
         <li className={styles.menuItem}>
-          <a>Politici</a>
+          <a href="#policies">Politici</a>
         </li>
         <li className={styles.menuItem}>
           <a>Contacte</a>

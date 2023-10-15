@@ -40,7 +40,7 @@ export const Galery = () => {
   }, []);
 
   return (
-    <section className={styles.section}>
+    <section id="galery" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>Galerie foto</h3>
         <p>Soliditate, Eleganță, Perseverență</p>

@@ -7,6 +7,7 @@ import { Production } from "@/components/Production/Production";
 import { Galery } from "@/components/Galery/Galery";
 import { Politics } from "@/components/Politics/Politics";
 import { ResourcesAvailability } from "@/components/ResourcesAvailability/ResourcesAvailability";
+import { Certificates } from "@/components/Certificates/Certificates";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         <Galery />
         <Politics />
         <ResourcesAvailability />
+        <Certificates />
       </main>
       <Footer />
     </>

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const AboutUs = () => {
   return (
-    <section className={styles.section}>
+    <section id="aboutUs" className={styles.section}>
       <div className={styles.left}>
         <div className={styles.aboutUsHeader}>
           <h3>

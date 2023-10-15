@@ -23,7 +23,7 @@ const politicsList = [
 
 export const Politics = () => {
   return (
-    <section className={styles.section}>
+    <section id="policies" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>Politicile de bază</h3>
       </div>

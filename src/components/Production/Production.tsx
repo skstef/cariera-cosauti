@@ -5,7 +5,7 @@ import { ProductCard } from "./ProductCard/ProductCard";
 
 export const Production = () => {
   return (
-    <section className={styles.section}>
+    <section id="production" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>Producția</h3>
       </div>
