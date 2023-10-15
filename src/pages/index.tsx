@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer/Footer";
 import { Production } from "@/components/Production/Production";
 import { Galery } from "@/components/Galery/Galery";
 import { Politics } from "@/components/Politics/Politics";
+import { ResourcesAvailability } from "@/components/ResourcesAvailability/ResourcesAvailability";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Production />
         <Galery />
         <Politics />
+        <ResourcesAvailability />
       </main>
       <Footer />
     </>
