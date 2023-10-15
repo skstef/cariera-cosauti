@@ -4,6 +4,7 @@ import { Header } from "@/components/Header/Header";
 import { FirstSection } from "@/components/FirstSection/FirstSection";
 import { AboutUs } from "@/components/AboutUs/AboutUs";
 import { Footer } from "@/components/Footer/Footer";
+import { Production } from "@/components/Production/Production";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function Home() {
       <main>
         <FirstSection />
         <AboutUs />
+        <Production />
       </main>
       <Footer />
     </>

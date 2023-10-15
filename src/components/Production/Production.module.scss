@@ -1,0 +1,56 @@
+.section {
+  padding: 65px 150px 100px 150px;
+}
+
+.sectionHeader {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 207, 122, 0.1) 0%,
+    rgba(232, 207, 122, 0.01) 58.31%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #e8cf7a;
+  }
+
+  h3 {
+    margin-left: 23px;
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+}
+
+.sectionSubHeader {
+  color: #e8cf7a;
+  font-family: "Lato";
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.16;
+  margin: 56px 0;
+
+  &:not(:first-of-type) {
+    margin-top: 100px;
+  }
+}
+
+.productsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 18px;
+  row-gap: 54px;
+  justify-content: center;
+}
