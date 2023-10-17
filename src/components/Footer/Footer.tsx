@@ -21,15 +21,19 @@ export const Footer = () => {
       <div className={styles.socials}>
         <p className={styles.followUs}>Urmărește-ne</p>
 
-        <a target="_blank" className={styles.socialsIcon}>
+        {/* <a target="_blank" className={styles.socialsIcon}>
           <Image
             src="/images/instagram.svg"
             alt="Instagram"
             width={32}
             height={32}
           />
-        </a>
-        <a target="_blank" className={styles.socialsIcon}>
+        </a> */}
+        <a
+          href="https://www.facebook.com/CGPSoroca"
+          target="_blank"
+          className={styles.socialsIcon}
+        >
           <Image
             src="/images/facebook.svg"
             alt="Facebook"
@@ -37,7 +41,11 @@ export const Footer = () => {
             height={32}
           />
         </a>
-        <a target="_blank" className={styles.socialsIcon}>
+        <a
+          href="https://youtu.be/PX0a9yDDCss"
+          target="_blank"
+          className={styles.socialsIcon}
+        >
           <Image
             src="/images/youtube.svg"
             alt="Youtube"
@@ -45,7 +53,11 @@ export const Footer = () => {
             height={32}
           />
         </a>
-        <a target="_blank" className={styles.socialsIcon}>
+        <a
+          href="https://www.linkedin.com/company/cariera-de-granit-si-pietris-din-soroca-s-a/"
+          target="_blank"
+          className={styles.socialsIcon}
+        >
           <Image
             src="/images/linkedin.svg"
             alt="Linkedin"
