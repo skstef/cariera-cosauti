@@ -1,14 +1,14 @@
 .section {
   display: flex;
   justify-content: space-between;
-  padding: 100px 135px 110px 150px;
+  padding: 100px 0 110px 0;
 
-  max-width: 1920px;
+  max-width: 1620px;
   margin: 0 auto;
 }
 
 .resourcesAvailabilityHeader {
-  margin-top: 85px;
+  margin-top: 90px;
   position: relative;
   background: linear-gradient(
     90deg,

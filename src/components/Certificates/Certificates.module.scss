@@ -68,4 +68,9 @@
   width: 398px;
   height: 480px;
   background: #fff;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 }

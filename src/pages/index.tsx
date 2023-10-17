@@ -8,6 +8,7 @@ import { Galery } from "@/components/Galery/Galery";
 import { Politics } from "@/components/Politics/Politics";
 import { ResourcesAvailability } from "@/components/ResourcesAvailability/ResourcesAvailability";
 import { Certificates } from "@/components/Certificates/Certificates";
+import { Parteners } from "@/components/Parteners/Parteners";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Politics />
         <ResourcesAvailability />
         <Certificates />
+        <Parteners />
       </main>
       <Footer />
     </>
