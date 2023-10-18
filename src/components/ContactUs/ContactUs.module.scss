@@ -87,15 +87,6 @@
 
 .contactFormInput {
   width: 372px;
-
-  :global(.MuiInputLabel-root) {
-    transform: translate(14px, 20px) scale(1) !important;
-  }
-
-  input {
-    height: 70px !important;
-    box-sizing: border-box;
-  }
 }
 
 .contactFormCheckboxWrapper {

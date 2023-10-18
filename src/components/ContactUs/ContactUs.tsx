@@ -17,12 +17,14 @@ export const ContactUs = () => {
               id="surname"
               label="Nume"
               autoComplete="surname"
+              InputProps={{ sx: { borderRadius: 0 } }}
             />
             <TextField
               className={styles.contactFormInput}
               id="name"
               label="Prenume"
               autoComplete="name"
+              InputProps={{ sx: { borderRadius: 0 } }}
             />
           </div>
           <div className={styles.contactFormRow}>
@@ -31,12 +33,14 @@ export const ContactUs = () => {
               id="phone"
               label="Telefon"
               autoComplete="phone"
+              InputProps={{ sx: { borderRadius: 0 } }}
             />
             <TextField
               className={styles.contactFormInput}
               id="email"
               label="Email"
               autoComplete="email"
+              InputProps={{ sx: { borderRadius: 0 } }}
             />
           </div>
 
@@ -48,6 +52,7 @@ export const ContactUs = () => {
             autoComplete="message"
             multiline
             rows={6}
+            InputProps={{ sx: { borderRadius: 0 } }}
           />
 
           <FormControlLabel
