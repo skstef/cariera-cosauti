@@ -1,0 +1,121 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  max-width: 1620px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  margin-top: 100px;
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  margin-top: 100px;
+  margin-bottom: 54px;
+  padding-bottom: 5px;
+  background: linear-gradient(
+    90deg,
+    rgba(232, 207, 122, 0.1) 0%,
+    rgba(232, 207, 122, 0.01) 58.31%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #e8cf7a;
+  }
+
+  h3 {
+    margin-left: 23px;
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%;
+    text-transform: uppercase;
+  }
+}
+
+.addressBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.contents {
+  display: flex;
+}
+
+.addressBox {
+  margin-left: 50px;
+}
+
+.addressHeader {
+  color: #fff;
+  font-size: 1.625rem;
+  font-weight: 600;
+  line-height: 1.15;
+  margin-bottom: 18px;
+}
+
+.addressData {
+  color: #fff;
+  font-style: normal;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 115%;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+.contactFormRow {
+  display: flex;
+  gap: 56px;
+  margin-bottom: 55px;
+}
+
+.contactFormInput {
+  width: 372px;
+
+  :global(.MuiInputLabel-root) {
+    transform: translate(14px, 20px) scale(1) !important;
+  }
+
+  input {
+    height: 70px !important;
+    box-sizing: border-box;
+  }
+}
+
+.contactFormCheckboxWrapper {
+  margin-top: 39px;
+}
+
+.contactFormCheckboxLabel {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.625;
+
+  a {
+    color: #e8cf7a;
+    font-weight: 700;
+  }
+}
+
+.contactFormSubmitBtn {
+  margin-right: auto;
+  margin-top: 47px;
+  padding: 15px 25px;
+}

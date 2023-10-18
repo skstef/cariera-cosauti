@@ -9,6 +9,7 @@ import { Politics } from "@/components/Politics/Politics";
 import { ResourcesAvailability } from "@/components/ResourcesAvailability/ResourcesAvailability";
 import { Certificates } from "@/components/Certificates/Certificates";
 import { Parteners } from "@/components/Parteners/Parteners";
+import { ContactUs } from "@/components/ContactUs/ContactUs";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <ResourcesAvailability />
         <Certificates />
         <Parteners />
+        <ContactUs />
       </main>
       <Footer />
     </>
