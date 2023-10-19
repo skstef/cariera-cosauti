@@ -1,0 +1,92 @@
+.section {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  min-height: 1343px;
+  position: relative;
+
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.contentContainer {
+  margin-top: 105px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sectionHeader {
+  z-index: 3;
+  position: relative;
+  padding-bottom: 10px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(232, 207, 122, 0.1) 0%,
+    rgba(232, 207, 122, 0.01) 58.31%
+  );
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: #e8cf7a;
+  }
+
+  h3 {
+    margin-left: 23px;
+    color: #fff;
+    font-family: "Exo 2";
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.sectionSubTitle {
+  z-index: 2;
+  margin-top: 20px;
+  color: #e8cf7a;
+  font-size: 1.625em;
+  font-weight: 500;
+  line-height: 110%;
+}
+
+.sectionImage {
+  object-fit: cover;
+  width: 100vw;
+  max-width: 100%;
+  position: absolute;
+}
+
+.contactFormSubmitBtn {
+  margin-right: auto;
+  padding: 15px 25px;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  gap: 56px;
+  margin-top: 56px;
+}
+
+.contactFormInput {
+  width: 700px;
+}
+
+.contactFormFileInput {
+  width: 700px;
+
+  input {
+    height: 160px;
+  }
+}

@@ -10,6 +10,7 @@ import { ResourcesAvailability } from "@/components/ResourcesAvailability/Resour
 import { Certificates } from "@/components/Certificates/Certificates";
 import { Parteners } from "@/components/Parteners/Parteners";
 import { ContactUs } from "@/components/ContactUs/ContactUs";
+import { HumanResources } from "@/components/HumanResources/HumanResources";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
         <Politics />
         <ResourcesAvailability />
         <Certificates />
+        <HumanResources />
         <Parteners />
         <ContactUs />
       </main>
