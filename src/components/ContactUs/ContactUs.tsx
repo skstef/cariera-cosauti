@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export const ContactUs = () => {
   return (
-    <section className={styles.section}>
+    <section id="contact_us" className={styles.section}>
       <Image
         className={styles.sectionImage}
         src="/images/contact_bg.webp"

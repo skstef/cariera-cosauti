@@ -13,9 +13,13 @@ export const Footer = () => {
       </div>
 
       <nav className={styles.nav}>
-        <a className={styles.navLink}>Despre noi</a>
+        <a href="#about_us" className={styles.navLink}>
+          Despre noi
+        </a>
         <a className={styles.navLink}>Termeni și condiții</a>
-        <a className={styles.navLink}>Contactează-ne</a>
+        <a href="#contact_us" className={styles.navLink}>
+          Contactează-ne
+        </a>
       </nav>
 
       <div className={styles.socials}>

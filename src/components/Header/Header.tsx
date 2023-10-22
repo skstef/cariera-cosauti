@@ -8,7 +8,7 @@ export const Header = () => {
       <Image alt="logo" src="/images/logo.webp" width={75} height={75} />
       <ul className={styles.topMenu}>
         <li className={styles.menuItem}>
-          <a href="#aboutUs">Despre Noi</a>
+          <a href="#about_us">Despre Noi</a>
         </li>
         <li className={styles.menuItem}>
           <a href="#production">Producția</a>
@@ -17,19 +17,16 @@ export const Header = () => {
           <a href="#galery">Galeria</a>
         </li>
         <li className={styles.menuItem}>
-          <a>Cadre</a>
-        </li>
-        <li className={styles.menuItem}>
-          <a>Parteneri</a>
+          <a href="#parteners">Parteneri</a>
         </li>
         <li className={styles.menuItem}>
           <a href="#policies">Politici</a>
         </li>
         <li className={styles.menuItem}>
-          <a>Contacte</a>
+          <a href="#contact_us">Contacte</a>
         </li>
         <li className={styles.menuItem}>
-          <a>Cadre</a>
+          <a href="#human_resources">Cadre</a>
         </li>
       </ul>
     </header>

@@ -12,7 +12,7 @@ export const HumanResources = () => {
   };
 
   return (
-    <section className={styles.section}>
+    <section id="human_resources" className={styles.section}>
       <div className={styles.contentContainer}>
         <div className={styles.sectionHeader}>
           <h3>Cadre</h3>

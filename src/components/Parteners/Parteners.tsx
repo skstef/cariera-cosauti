@@ -20,7 +20,7 @@ const partenersList = [
 
 export const Parteners = () => {
   return (
-    <section className={styles.section}>
+    <section id="parteners" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>Parteneri</h3>
       </div>
