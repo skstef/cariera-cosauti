@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Footer.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -13,13 +14,15 @@ export const Footer = () => {
       </div>
 
       <nav className={styles.nav}>
-        <a href="#about_us" className={styles.navLink}>
+        <Link href="/#about_us" className={styles.navLink}>
           Despre noi
-        </a>
-        <a className={styles.navLink}>Termeni și condiții</a>
-        <a href="#contact_us" className={styles.navLink}>
+        </Link>
+        <Link href="/termeni-si-conditii" className={styles.navLink}>
+          Termeni și condiții
+        </Link>
+        <Link href="/#contact_us" className={styles.navLink}>
           Contactează-ne
-        </a>
+        </Link>
       </nav>
 
       <div className={styles.socials}>

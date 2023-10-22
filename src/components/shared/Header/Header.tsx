@@ -1,32 +1,35 @@
 import React from "react";
 import styles from "./Header.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <Image alt="logo" src="/images/logo.webp" width={75} height={75} />
+      <Link href="/">
+        <Image alt="logo" src="/images/logo.webp" width={75} height={75} />
+      </Link>
       <ul className={styles.topMenu}>
         <li className={styles.menuItem}>
-          <a href="#about_us">Despre Noi</a>
+          <Link href="/#about_us">Despre Noi</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#production">Producția</a>
+          <Link href="/#production">Producția</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#galery">Galeria</a>
+          <Link href="/#galery">Galeria</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#parteners">Parteneri</a>
+          <Link href="/#parteners">Parteneri</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#policies">Politici</a>
+          <Link href="/#policies">Politici</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#contact_us">Contacte</a>
+          <Link href="/#contact_us">Contacte</Link>
         </li>
         <li className={styles.menuItem}>
-          <a href="#human_resources">Cadre</a>
+          <Link href="/#human_resources">Cadre</Link>
         </li>
       </ul>
     </header>

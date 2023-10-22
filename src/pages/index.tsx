@@ -1,18 +1,18 @@
 import Head from "next/head";
-import { Header } from "@/components/Header/Header";
-import { FirstSection } from "@/components/FirstSection/FirstSection";
-import { AboutUs } from "@/components/AboutUs/AboutUs";
-import { Footer } from "@/components/Footer/Footer";
-import { Production } from "@/components/Production/Production";
-import { Galery } from "@/components/Galery/Galery";
-import { Politics } from "@/components/Politics/Politics";
-import { ResourcesAvailability } from "@/components/ResourcesAvailability/ResourcesAvailability";
-import { Certificates } from "@/components/Certificates/Certificates";
-import { Parteners } from "@/components/Parteners/Parteners";
-import { ContactUs } from "@/components/ContactUs/ContactUs";
-import { HumanResources } from "@/components/HumanResources/HumanResources";
+import { Header } from "@/components/shared/Header/Header";
+import { Footer } from "@/components/shared/Footer/Footer";
+import { FirstSection } from "@/components/index/FirstSection/FirstSection";
+import { AboutUs } from "@/components/index/AboutUs/AboutUs";
+import { Production } from "@/components/index/Production/Production";
+import { Galery } from "@/components/index/Galery/Galery";
+import { Politics } from "@/components/index/Politics/Politics";
+import { ResourcesAvailability } from "@/components/index/ResourcesAvailability/ResourcesAvailability";
+import { Certificates } from "@/components/index/Certificates/Certificates";
+import { Parteners } from "@/components/index/Parteners/Parteners";
+import { ContactUs } from "@/components/index/ContactUs/ContactUs";
+import { HumanResources } from "@/components/index/HumanResources/HumanResources";
 
-export default function Home() {
+const IndexPage = () => {
   return (
     <>
       <Head>
@@ -21,8 +21,6 @@ export default function Home() {
           name="description"
           content="SA „Cariera de Granit și Pietriș din Soroca” este situată pe versantul drept al terasei inundate a râului Nistru, la o distanță de 0,5 km est de satul Cosăuți, raionul Soroca, RM."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/icons/favicon.ico" />
       </Head>
       <Header />
       <main>
@@ -40,4 +38,6 @@ export default function Home() {
       <Footer />
     </>
   );
-}
+};
+
+export default IndexPage;
