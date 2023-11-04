@@ -23,6 +23,10 @@ const StyledTextField = styled(TextField)`
     border-color: white;
   }
 
+  & .muiformlabel-root[data-shrink=false]: {
+    color: #f7f0e3;
+  }
+
   background: #212122;
   border-color: white;
   width: 372px;
@@ -56,7 +60,6 @@ export const ContactUs = () => {
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
                     top: "5px",
-                    color: "#F7F0E3",
                   },
                 }}
               />
@@ -69,7 +72,6 @@ export const ContactUs = () => {
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
                     top: "5px",
-                    color: "#F7F0E3",
                   },
                 }}
               />
@@ -84,7 +86,6 @@ export const ContactUs = () => {
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
                     top: "5px",
-                    color: "#F7F0E3",
                   },
                 }}
               />
@@ -97,7 +98,6 @@ export const ContactUs = () => {
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
                     top: "5px",
-                    color: "#F7F0E3",
                   },
                 }}
               />
@@ -115,7 +115,6 @@ export const ContactUs = () => {
                 width: "100%",
                 ".MuiFormLabel-root[data-shrink=false]": {
                   top: "5px",
-                  color: "#F7F0E3",
                 },
               }}
               InputProps={{ sx: { borderRadius: 0 } }}
