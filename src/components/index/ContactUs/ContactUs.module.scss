@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   position: relative;
-  min-height: 920px;
+  min-height: 914px;
 
   max-width: 1920px;
   margin: 0 auto;
@@ -26,9 +26,12 @@
   z-index: 2;
   position: relative;
   display: inline-block;
-  margin-top: 87px;
-  margin-bottom: 54px;
-  padding-bottom: 5px;
+  margin-top: 86px;
+  margin-bottom: 43px;
+  margin-left: -5px;
+
+  padding-top: 7px;
+  padding-bottom: 13px;
   background: linear-gradient(
     90deg,
     rgba(232, 207, 122, 0.1) 0%,
@@ -51,7 +54,7 @@
     font-family: "Exo 2";
     font-size: 3rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 110%;
     text-transform: uppercase;
   }
@@ -60,20 +63,18 @@
 .addressBox {
   display: flex;
   flex-direction: column;
+  margin-left: 54px;
+  margin-right: 45px;
 }
 
 .contents {
   display: flex;
 }
 
-.addressBox {
-  margin-left: 50px;
-}
-
 .addressHeader {
   color: #fff;
   font-size: 1.625rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
   margin-bottom: 18px;
 }
@@ -90,7 +91,6 @@
 .contactForm {
   display: flex;
   flex-direction: column;
-  margin-right: 50px;
 }
 
 .contactFormRow {
@@ -99,12 +99,8 @@
   margin-bottom: 55px;
 }
 
-.contactFormInput {
-  width: 372px;
-}
-
 .contactFormCheckboxWrapper {
-  margin-top: 39px;
+  margin-top: 31px;
 }
 
 .contactFormCheckboxLabel {
@@ -116,11 +112,13 @@
   a {
     color: #e8cf7a;
     font-weight: 700;
+    margin-left: 5px;
   }
 }
 
 .contactFormSubmitBtn {
   margin-right: auto;
   margin-top: 47px;
-  padding: 15px 25px;
+  padding: 24px 88px;
+  font-size: 1.5rem;
 }

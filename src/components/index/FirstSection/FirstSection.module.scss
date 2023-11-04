@@ -14,7 +14,7 @@
 .textBoxWrapper {
   position: absolute;
   left: 150px;
-  top: 308px;
+  top: 300px;
 }
 
 .textBox {
@@ -24,7 +24,7 @@
     rgba(232, 207, 122, 0.15) 0%,
     rgba(232, 207, 122, 0.01) 54.48%
   );
-  padding: 55px 0 55px 22px;
+  padding: 30px 0 30px 30px;
 
   &::before {
     content: "";
@@ -40,14 +40,14 @@
     text-transform: uppercase;
     color: #fff;
     font-family: "Exo 2";
-    font-size: 6.25rem;
+    font-size: 4.75rem;
     font-style: normal;
     font-weight: 500;
     line-height: 110%;
     margin: 0;
 
     & > span {
-      font-weight: 700;
+      font-weight: 400;
       color: #e8cf7a;
     }
   }
@@ -55,17 +55,18 @@
   & > h3 {
     color: #fff;
     font-family: "Exo 2";
-    font-size: 4.375rem;
+    font-size: 3rem;
     font-style: italic;
     font-weight: 200;
     line-height: 100%; /* 70px */
-    margin-top: 30px;
+    margin-top: 10px;
   }
 }
 
 .goToProductionBtn {
   margin-top: 56px;
-  padding: 30px 60px;
+  padding: 23px 50px;
+  font-size: 1.5rem;
   background: #e8cf7a;
   color: #212122;
 }

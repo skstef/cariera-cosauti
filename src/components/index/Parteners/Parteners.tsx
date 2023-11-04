@@ -23,11 +23,8 @@ export const Parteners = () => {
     <section id="parteners" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>Parteneri</h3>
+        <p>Construim împreună baze solide pentru un viitor durabil</p>
       </div>
-
-      <p className={styles.sectionSubTitle}>
-        Construim împreună baze solide pentru un viitor durabil
-      </p>
 
       <div className={styles.partenersGrid}>
         {partenersList.map((el) => (

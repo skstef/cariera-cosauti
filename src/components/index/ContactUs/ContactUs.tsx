@@ -1,7 +1,32 @@
 import React from "react";
 import styles from "./ContactUs.module.scss";
-import { Button, Checkbox, FormControlLabel, TextField } from "@mui/material";
+import {
+  Button,
+  Checkbox,
+  FormControlLabel,
+  TextField,
+  styled,
+} from "@mui/material";
 import Image from "next/image";
+
+const StyledTextField = styled(TextField)`
+  & label.Mui-focused {
+    color: white;
+  }
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: white;
+    }
+  }
+
+  fieldset {
+    border-color: white;
+  }
+
+  background: #212122;
+  border-color: white;
+  width: 372px;
+`;
 
 export const ContactUs = () => {
   return (
@@ -10,7 +35,7 @@ export const ContactUs = () => {
         className={styles.sectionImage}
         src="/images/contact_bg.webp"
         width={1920}
-        height={920}
+        height={914}
         alt="Formular de contact"
       />
 
@@ -22,39 +47,63 @@ export const ContactUs = () => {
         <div className={styles.contents}>
           <form className={styles.contactForm}>
             <div className={styles.contactFormRow}>
-              <TextField
+              <StyledTextField
                 className={styles.contactFormInput}
                 id="surname"
                 label="Nume"
                 autoComplete="surname"
-                InputProps={{ sx: { borderRadius: 0 } }}
+                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                sx={{
+                  ".MuiFormLabel-root[data-shrink=false]": {
+                    top: "5px",
+                    color: "#F7F0E3",
+                  },
+                }}
               />
-              <TextField
+              <StyledTextField
                 className={styles.contactFormInput}
                 id="name"
                 label="Prenume"
                 autoComplete="name"
-                InputProps={{ sx: { borderRadius: 0 } }}
+                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                sx={{
+                  ".MuiFormLabel-root[data-shrink=false]": {
+                    top: "5px",
+                    color: "#F7F0E3",
+                  },
+                }}
               />
             </div>
             <div className={styles.contactFormRow}>
-              <TextField
+              <StyledTextField
                 className={styles.contactFormInput}
                 id="phone"
                 label="Telefon"
                 autoComplete="phone"
-                InputProps={{ sx: { borderRadius: 0 } }}
+                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                sx={{
+                  ".MuiFormLabel-root[data-shrink=false]": {
+                    top: "5px",
+                    color: "#F7F0E3",
+                  },
+                }}
               />
-              <TextField
+              <StyledTextField
                 className={styles.contactFormInput}
                 id="email"
                 label="Email"
                 autoComplete="email"
-                InputProps={{ sx: { borderRadius: 0 } }}
+                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                sx={{
+                  ".MuiFormLabel-root[data-shrink=false]": {
+                    top: "5px",
+                    color: "#F7F0E3",
+                  },
+                }}
               />
             </div>
 
-            <TextField
+            <StyledTextField
               className={styles.contactFormTextField}
               fullWidth
               id="message"
@@ -62,6 +111,13 @@ export const ContactUs = () => {
               autoComplete="message"
               multiline
               rows={6}
+              sx={{
+                width: "100%",
+                ".MuiFormLabel-root[data-shrink=false]": {
+                  top: "5px",
+                  color: "#F7F0E3",
+                },
+              }}
               InputProps={{ sx: { borderRadius: 0 } }}
             />
 
@@ -83,16 +139,6 @@ export const ContactUs = () => {
               Trimite
             </Button>
           </form>
-
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10629.985089045143!2d28.3094434!3d48.2355735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ccc31e748b306d%3A0x8ed0c1fc7b4f3a78!2sCariera%20de%20Granit%20%C5%9Fi%20Pietri%C5%9F%20din%20Soroca!5e0!3m2!1sru!2s!4v1697579848028!5m2!1sru!2s"
-            width="428"
-            height="424"
-            style={{ border: 0 }}
-            allowFullScreen={false}
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
 
           <div className={styles.addressBox}>
             <p className={styles.addressHeader}>Adresa</p>
@@ -125,6 +171,16 @@ export const ContactUs = () => {
               tel: +373 230 20712
             </address>
           </div>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10629.985089045143!2d28.3094434!3d48.2355735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ccc31e748b306d%3A0x8ed0c1fc7b4f3a78!2sCariera%20de%20Granit%20%C5%9Fi%20Pietri%C5%9F%20din%20Soroca!5e0!3m2!1sru!2s!4v1697579848028!5m2!1sru!2s"
+            width="428"
+            height="424"
+            style={{ border: 0 }}
+            allowFullScreen={false}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </section>

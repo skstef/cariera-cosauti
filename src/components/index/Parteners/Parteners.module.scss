@@ -1,18 +1,15 @@
 .section {
-  max-width: 1820px;
+  max-width: 1620px;
   margin: 0 auto;
   margin-top: 100px;
-  display: flex;
-  flex-direction: column;
 }
 
 .sectionHeader {
-  margin-top: 100px;
-  z-index: 2;
   position: relative;
   display: inline-block;
-  margin: 100px auto 0 auto;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  margin-top: 105px;
+  margin-left: -5px;
   background: linear-gradient(
     90deg,
     rgba(232, 207, 122, 0.1) 0%,
@@ -30,7 +27,7 @@
   }
 
   h3 {
-    margin-left: 23px;
+    margin-left: 20px;
     color: #fff;
     font-family: "Exo 2";
     font-size: 3rem;
@@ -39,25 +36,23 @@
     line-height: 110%;
     text-transform: uppercase;
   }
-}
 
-.sectionSubTitle {
-  z-index: 2;
-  margin-top: 20px;
-  color: #e8cf7a;
-  text-align: center;
-  font-size: 1.625em;
-  font-weight: 500;
-  line-height: 110%;
+  p {
+    margin-left: 20px;
+    color: #e8cf7a;
+    font-family: "Exo 2";
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
 }
 
 .partenersGrid {
-  margin-top: 20px;
   display: grid;
-  justify-content: center;
+  justify-content: space-between;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin-bottom: 60px;
+  margin: 35px -115px 40px -115px;
   gap: 15px;
 }
 

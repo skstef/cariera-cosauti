@@ -7,7 +7,13 @@ export const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.firstBox}>
-        <Image alt="logo" src="/images/logo.webp" width={75} height={75} />
+        <Image
+          className={styles.logo}
+          alt="logo"
+          src="/images/logo.webp"
+          width={75}
+          height={75}
+        />
         <div className={styles.copyRight}>
           All rights reserved © 2023. Cariera Cosăuți
         </div>
@@ -21,7 +27,7 @@ export const Footer = () => {
           Termeni și condiții
         </Link>
         <Link href="/#contact_us" className={styles.navLink}>
-          Contactează-ne
+          Contacte
         </Link>
       </nav>
 

@@ -1,12 +1,11 @@
 .section {
-  padding: 60px 0 0 10px;
-
   max-width: 1620px;
   margin: 0 auto;
 }
 
 .sectionHeader {
   position: relative;
+  padding: 10px 0;
   display: inline-block;
   background: linear-gradient(
     90deg,
@@ -43,18 +42,17 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.16;
-  margin: 60px 0;
+  margin: 30px 0 56px 0;
 
   &:not(:first-of-type) {
-    margin-top: 100px;
-    margin-bottom: 55px;
+    margin: 72px 0 56px 0;
   }
 }
 
 .productsContainer {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 18px;
+  column-gap: 24px;
   row-gap: 54px;
   justify-content: center;
 }
