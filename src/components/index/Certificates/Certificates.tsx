@@ -6,10 +6,7 @@ export const Certificates = () => {
   return (
     <section className={styles.section}>
       <div className={styles.sectionHeader}>
-        <h3>
-          Certificate și
-          <br /> <span>standarde</span>
-        </h3>
+        <h3>Certificate și standarde</h3>
       </div>
 
       <div className={styles.certificatesContainer}>
@@ -23,7 +20,7 @@ export const Certificates = () => {
         src="/images/certificates.webp"
         className={styles.sectionImage}
         width={1920}
-        height={830}
+        height={816}
         alt="certificates"
       />
     </section>
