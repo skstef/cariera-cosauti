@@ -2,8 +2,8 @@
   background: rgba(22, 22, 22, 0.7);
   backdrop-filter: blur(6px);
   display: flex;
-  padding: 17px 140px;
-  justify-content: space-between;
+  padding: 17px 158px 17px 140px;
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   left: 0;
@@ -17,6 +17,7 @@
 .topMenu {
   display: flex;
   list-style-type: none;
+  margin-left: auto;
 }
 
 .menuItem {
@@ -31,7 +32,7 @@
   }
 
   &:not(:last-child) {
-    margin-right: 56px;
+    margin-right: 55px;
   }
 
   &:after {

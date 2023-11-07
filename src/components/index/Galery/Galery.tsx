@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef } from "react";
 import styles from "./Galery.module.scss";
 import Image from "next/image";
-import AliceCarousel from "react-alice-carousel";
-import "react-alice-carousel/lib/alice-carousel.css";
 
 const images = [
   "/images/gallery-1.webp",
@@ -22,22 +20,34 @@ const images = [
 ];
 
 const items = images.map((el) => (
-  <Image
-    width={385}
-    height={385}
-    className={styles.image}
-    key={el}
-    src={el}
-    alt="Galerie"
-  />
+  <div className={styles.imageWrapper} key={el}>
+    <Image
+      width={638}
+      height={803}
+      className={styles.image}
+      src={el}
+      draggable="false"
+      alt="Galerie"
+    />
+
+    <p>Gard gabiion</p>
+  </div>
 ));
 
 export const Galery = () => {
-  const [innerWidth, setInnerWidth] = useState(1024);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    setInnerWidth(window.innerWidth);
-  }, []);
+  const handleScrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -500, behavior: "smooth" });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 500, behavior: "smooth" });
+    }
+  };
 
   return (
     <section id="galery" className={styles.section}>
@@ -45,29 +55,29 @@ export const Galery = () => {
         <h3>Galerie foto</h3>
         <p>Soliditate, Eleganță, Perseverență</p>
       </div>
-      <div className={styles.imagesCarousel}>
-        <AliceCarousel
-          mouseTracking
-          items={items}
-          innerWidth={innerWidth}
-          infinite
-          disableButtonsControls
-          disableDotsControls
-          responsive={{
-            0: {
-              items: 1,
-            },
-            1024: {
-              items: 2,
-            },
-            1440: {
-              items: 3,
-            },
-            1700: {
-              items: 4,
-            },
-          }}
-        />
+
+      <div className={styles.imagesCarouselWrapper}>
+        <button onClick={handleScrollLeft} className={styles.leftArrowBtn}>
+          <Image
+            width={104}
+            height={130}
+            src="/images/leftArrow.webp"
+            alt="left arrow"
+            draggable="false"
+          />
+        </button>
+        <div ref={containerRef} className={styles.imagesCarousel}>
+          {items}
+        </div>
+        <button onClick={handleScrollRight} className={styles.rightArrowBtn}>
+          <Image
+            width={104}
+            height={130}
+            src="/images/rightArrow.webp"
+            alt="right arrow"
+            draggable="false"
+          />
+        </button>
       </div>
     </section>
   );

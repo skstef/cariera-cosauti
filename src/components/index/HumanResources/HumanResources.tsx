@@ -34,13 +34,12 @@ const StyledFileInput = styled(MuiFileInput)`
       border-color: white;
     }
   }
+  & .MuiFileInput-placeholder {
+    color: #fffff !important;
+  }
 
   fieldset {
     border-color: white;
-  }
-
-  & span {
-    color: #f7f0e3;
   }
 
   border-color: white;

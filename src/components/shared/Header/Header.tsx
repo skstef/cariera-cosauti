@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Header.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { LanguangeChange } from "../LanguangeChange/LanguangeChange";
 
 export const Header = () => {
   return (
@@ -32,6 +33,7 @@ export const Header = () => {
           <Link href="/#human_resources">Cadre</Link>
         </li>
       </ul>
+      <LanguangeChange />
     </header>
   );
 };
