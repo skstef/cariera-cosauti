@@ -22,6 +22,18 @@ export const LanguangeChange = () => {
           alt="expand"
         />
       </button>
+
+      <div className={styles.languages}>
+        <button className={styles.langBtn}>
+          <Image width={20} height={20} src="/images/RO.webp" alt="Romanian" />
+        </button>
+        <button className={styles.langBtn}>
+          <Image width={20} height={20} src="/images/EN.webp" alt="Romanian" />
+        </button>
+        <button className={styles.langBtn}>
+          <Image width={20} height={20} src="/images/RU.webp" alt="Romanian" />
+        </button>
+      </div>
     </div>
   );
 };

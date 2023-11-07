@@ -3,10 +3,36 @@
   align-items: center;
   gap: 4px;
   margin-left: 64px;
+  position: relative;
+
+  &:hover .languages {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .expandBtn {
   background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: transparent;
+  padding: 8px 30px 8px 8px;
+  position: absolute;
+  bottom: -80px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+
+.langBtn {
+  background: transparent;
   border: none;
   outline: none;
   cursor: pointer;
