@@ -11,6 +11,7 @@
   z-index: 3;
   position: relative;
   margin-top: 165px;
+  margin-left: -5px;
 
   background: linear-gradient(
     90deg,
@@ -29,13 +30,13 @@
   }
 
   h3 {
-    margin-left: 23px;
+    margin: -5px 0 -9px 23px;
     color: #fff;
     font-family: "Exo 2";
     font-size: 3rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.1;
     text-transform: uppercase;
 
     span {
@@ -49,7 +50,7 @@
   font-size: 1.375rem;
   font-weight: normal;
   line-height: 1.1;
-  margin-top: 62px;
+  margin-top: 60px;
   margin-bottom: 100px;
 
   span {
