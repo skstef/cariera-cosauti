@@ -36,4 +36,9 @@
   border: none;
   outline: none;
   cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    transform: scale(1.2);
+  }
 }

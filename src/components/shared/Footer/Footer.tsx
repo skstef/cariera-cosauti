@@ -20,7 +20,7 @@ export const Footer = () => {
       </div>
 
       <nav className={styles.nav}>
-        <Link href="/#about_us" className={styles.navLink}>
+        <Link href="/about-us" className={styles.navLink}>
           Despre noi
         </Link>
         <Link href="/termeni-si-conditii" className={styles.navLink}>

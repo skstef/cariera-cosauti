@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./FirstSection.module.scss";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import Router from "next/router";
 
 export const FirstSection = () => {
+  const viewProduction = () => {
+    Router.push("/#production");
+  };
+
   return (
     <section className={styles.section}>
       <Image
@@ -22,7 +27,11 @@ export const FirstSection = () => {
           <h3>Noi creăm baza viitorului</h3>
         </div>
 
-        <Button className={styles.goToProductionBtn} variant="contained">
+        <Button
+          onClick={viewProduction}
+          className={styles.goToProductionBtn}
+          variant="contained"
+        >
           Vezi producția
         </Button>
       </div>

@@ -2,8 +2,13 @@ import React from "react";
 import styles from "./AboutUs.module.scss";
 import { Button } from "@mui/material";
 import Image from "next/image";
+import Router from "next/router";
 
 export const AboutUs = () => {
+  const viewMoreDetails = () => {
+    Router.push("/about-us");
+  };
+
   return (
     <section id="about_us" className={styles.section}>
       <div className={styles.left}>
@@ -21,7 +26,11 @@ export const AboutUs = () => {
           instalat un concasor pentru producerea pietrișului calcaros.
         </p>
 
-        <Button variant="contained" className={styles.btn}>
+        <Button
+          onClick={viewMoreDetails}
+          variant="contained"
+          className={styles.btn}
+        >
           Află mai multe
         </Button>
       </div>
