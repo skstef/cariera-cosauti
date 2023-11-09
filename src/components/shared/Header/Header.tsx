@@ -4,9 +4,9 @@ import { HeaderDesktop } from "./HeaderDesktop/HeaderDesktop";
 import { HeaderMobile } from "./HeaderMobile/HeaderMobile";
 
 export const Header = () => {
-  const showDesktopVersion = useMediaQuery("(min-width:1100px)");
+  const isDesktop = useMediaQuery("(min-width:1100px)");
 
-  if (showDesktopVersion) {
+  if (isDesktop) {
     return <HeaderDesktop />;
   }
 

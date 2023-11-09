@@ -11,6 +11,10 @@ export const HeaderMobile = () => {
     setMenuOpened((oldState) => !oldState);
   };
 
+  const onMenuElementClick = () => {
+    setMenuOpened(false);
+  };
+
   return (
     <>
       <header className={styles.header}>
@@ -42,25 +46,25 @@ export const HeaderMobile = () => {
       >
         <nav className={styles.nav}>
           <ul className={styles.elementsList}>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#about_us">Despre Noi</Link>
             </li>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#production">Producția</Link>
             </li>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#galery">Galeria</Link>
             </li>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#parteners">Parteneri</Link>
             </li>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#policies">Politici</Link>
             </li>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#contact_us">Contacte</Link>
             </li>
-            <li className={styles.menuItem}>
+            <li className={styles.menuItem} onClick={onMenuElementClick}>
               <Link href="/#human_resources">Cadre</Link>
             </li>
           </ul>
