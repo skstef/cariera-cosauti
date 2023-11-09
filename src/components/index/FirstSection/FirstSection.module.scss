@@ -71,6 +71,12 @@
   color: #212122;
 }
 
+@media (max-width: 1600px) {
+  .textBoxWrapper {
+    left: 50px;
+  }
+}
+
 @media (max-width: 1440px) {
   .textBox {
     & > h1 {
@@ -83,7 +89,6 @@
   }
 
   .textBoxWrapper {
-    left: 75px;
     top: 150px;
   }
 }

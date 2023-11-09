@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./AboutUs.module.scss";
-import { Button } from "@mui/material";
+import { Button, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Router from "next/router";
 
 export const AboutUs = () => {
+  const isDesktop = useMediaQuery("(min-width:1100px)");
+
   const viewMoreDetails = () => {
     Router.push("/about-us");
   };
@@ -35,12 +37,21 @@ export const AboutUs = () => {
         </Button>
       </div>
       <div className={styles.image}>
-        <Image
-          src="/images/about.webp"
-          alt="Despre noi"
-          width={966}
-          height={518}
-        />
+        {isDesktop ? (
+          <Image
+            src="/images/about.webp"
+            alt="Despre noi"
+            width={966}
+            height={518}
+          />
+        ) : (
+          <Image
+            src="/images/aboutTablet.webp"
+            alt="Despre noi"
+            width={720}
+            height={390}
+          />
+        )}
       </div>
     </section>
   );
