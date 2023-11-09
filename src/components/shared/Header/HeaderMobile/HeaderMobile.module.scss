@@ -1,0 +1,128 @@
+.header {
+  background: rgba(22, 22, 22, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 14px 22px 11px 24px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menuBtn {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 78px;
+  bottom: 0;
+  background: #212122;
+  backdrop-filter: blur(2px);
+  overflow-y: auto;
+  max-height: calc(100vh - 78px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.1s;
+}
+
+.menuOpened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.elementsList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+  margin-bottom: 50px;
+}
+
+.menuItem {
+  position: relative;
+  cursor: pointer;
+
+  &:not(&:last-child) {
+    margin-bottom: 45px;
+  }
+
+  & > a {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    background-color: #e8cf7a;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.menuBurger {
+  position: relative;
+
+  height: 2px;
+  border-radius: 2px;
+  background: #e8cf7a;
+  width: 19px;
+
+  &,
+  &::before,
+  &::after {
+    height: 2px;
+    border-radius: 2px;
+    background: #e8cf7a;
+    width: 32px;
+    transition: transform 0.1s;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 12px;
+    left: 0;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 12px;
+    left: 0;
+  }
+}
+
+.menuBurgerClose {
+  transform: rotate(-45deg);
+
+  &::before {
+    opacity: 0;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+}

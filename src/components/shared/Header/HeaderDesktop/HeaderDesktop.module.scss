@@ -17,7 +17,11 @@
 .topMenu {
   display: flex;
   list-style-type: none;
+}
+
+.nav {
   margin-left: auto;
+  display: flex;
 }
 
 .menuItem {
@@ -53,6 +57,18 @@
     &:after {
       opacity: 1;
       visibility: visible;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .header {
+    padding: 17px 75px 17px 75px;
+  }
+
+  .menuItem {
+    &:not(:last-child) {
+      margin-right: 25px;
     }
   }
 }

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Footer } from "@/components/shared/Footer/Footer";
-import { Header } from "@/components/shared/Header/Header";
+import { Header } from "@/components/shared/Header/HeaderDesktop/HeaderDesktop";
 import React from "react";
 import { TermsOfUse } from "@/components/termeni-si-conditii/TermsOfUse/TermsOfUse";
 
