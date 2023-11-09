@@ -60,3 +60,46 @@
   height: 210px;
   position: relative;
 }
+
+@media (max-width: 1600px) {
+  .sectionHeader {
+    margin: 50px 0 98px 50px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .imageContainer {
+    width: 160px;
+    height: 147px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section {
+    padding-bottom: 112px;
+  }
+
+  .partenersGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 10px;
+  }
+
+  .sectionHeader {
+    padding-top: 15px;
+    margin-left: 24px;
+    margin-bottom: 70px;
+
+    &::before {
+      width: 3px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-left: 20px;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}

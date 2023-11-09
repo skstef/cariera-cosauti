@@ -35,8 +35,9 @@ const IndexPage = () => {
         <ResourcesAvailability />
         <Certificates />
         <HumanResources />
-        <Parteners /> */}
+        */}
 
+        <Parteners />
         <ContactUs />
       </main>
       <Footer />
