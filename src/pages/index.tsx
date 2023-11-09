@@ -24,7 +24,9 @@ const IndexPage = () => {
       </Head>
       <Header />
       <main>
-        {/* <FirstSection />
+        <FirstSection />
+
+        {/* 
         <AboutUs />
         <Production />
         <Galery />
