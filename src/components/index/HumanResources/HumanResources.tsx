@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./HumanResources.module.scss";
 import Image from "next/image";
-import { Button, TextField, styled } from "@mui/material";
+import { Button, TextField, styled, useMediaQuery } from "@mui/material";
 import { MuiFileInput } from "mui-file-input";
 
 const StyledTextField = styled(TextField)`
@@ -46,6 +46,8 @@ const StyledFileInput = styled(MuiFileInput)`
 `;
 
 export const HumanResources = () => {
+  const isDesktop = useMediaQuery("(min-width:1100px)");
+
   const [cvFile, setCvFile] = useState<File | null>(null);
 
   const handleCvFileChange = (newValue: File | null) => {
@@ -67,11 +69,6 @@ export const HumanResources = () => {
             label="Nume Prenume"
             autoComplete="nameSurname"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
-            sx={{
-              ".MuiFormLabel-root[data-shrink=false]": {
-                top: "5px",
-              },
-            }}
           />
 
           <StyledTextField
@@ -80,11 +77,6 @@ export const HumanResources = () => {
             label="Telefon"
             autoComplete="phone"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
-            sx={{
-              ".MuiFormLabel-root[data-shrink=false]": {
-                top: "5px",
-              },
-            }}
           />
 
           <StyledTextField
@@ -93,11 +85,6 @@ export const HumanResources = () => {
             label="Email"
             autoComplete="email"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
-            sx={{
-              ".MuiFormLabel-root[data-shrink=false]": {
-                top: "5px",
-              },
-            }}
           />
 
           <StyledTextField
@@ -106,11 +93,6 @@ export const HumanResources = () => {
             label="Funcția"
             autoComplete="job"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
-            sx={{
-              ".MuiFormLabel-root[data-shrink=false]": {
-                top: "5px",
-              },
-            }}
           />
 
           <StyledTextField
@@ -122,12 +104,6 @@ export const HumanResources = () => {
             multiline
             rows={6}
             InputProps={{ sx: { borderRadius: 0 } }}
-            sx={{
-              width: "100%",
-              ".MuiFormLabel-root[data-shrink=false]": {
-                top: "5px",
-              },
-            }}
           />
 
           <StyledFileInput
@@ -139,23 +115,35 @@ export const HumanResources = () => {
             InputProps={{ sx: { borderRadius: 0, height: "160px" } }}
           />
 
-          <Button
-            className={styles.contactFormSubmitBtn}
-            variant="contained"
-            type="submit"
-          >
-            Trimite
-          </Button>
+          <div className={styles.contactFormSubmitBtnWrapper}>
+            <Button
+              className={styles.contactFormSubmitBtn}
+              variant="contained"
+              type="submit"
+            >
+              Trimite
+            </Button>
+          </div>
         </form>
       </div>
 
-      <Image
-        src="/images/hr_bg.webp"
-        className={styles.sectionImage}
-        width={1920}
-        height={1368}
-        alt="cadre"
-      />
+      {isDesktop ? (
+        <Image
+          src="/images/hr_bg.webp"
+          className={styles.sectionImage}
+          width={1920}
+          height={1368}
+          alt="cadre"
+        />
+      ) : (
+        <Image
+          src="/images/hr_bg_tablet.webp"
+          className={styles.sectionImage}
+          width={768}
+          height={868}
+          alt="cadre"
+        />
+      )}
     </section>
   );
 };
