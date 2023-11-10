@@ -155,6 +155,12 @@
 
   .contactFormInput {
     flex: 1;
+
+    height: 60px;
+
+    :global(.MuiFormLabel-root[data-shrink="false"]) {
+      font-size: 0.75rem;
+    }
   }
 }
 
@@ -180,6 +186,7 @@
 
   .contactFormRow {
     margin-bottom: 39px;
+    gap: 22px;
   }
 
   .contactFormSubmitBtn {
