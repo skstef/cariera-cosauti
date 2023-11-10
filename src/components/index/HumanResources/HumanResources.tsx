@@ -27,7 +27,7 @@ const StyledTextField = styled(TextField)`
 
 const StyledFileInput = styled(MuiFileInput)`
   & label.Mui-focused {
-    color: white;
+    color: rgba(255, 255, 255, 0.7);
   }
   & .MuiOutlinedInput-root {
     &.Mui-focused fieldset {

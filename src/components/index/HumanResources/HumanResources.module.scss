@@ -169,7 +169,7 @@
       height: 180px;
     }
 
-    :global(.MuiFileInput-placeholder) {
+    :global(span.MuiFileInput-placeholder) {
       font-size: 0.75rem;
     }
   }

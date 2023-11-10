@@ -33,10 +33,10 @@ const IndexPage = () => {
         <Galery />
         <Politics />
         <ResourcesAvailability />
-        <Certificates />
         
         */}
 
+        <Certificates />
         <HumanResources />
         <Parteners />
         <ContactUs />
