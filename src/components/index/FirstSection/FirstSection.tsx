@@ -15,6 +15,7 @@ export const FirstSection = () => {
     <section className={styles.section}>
       {isDesktop ? (
         <Image
+          loading="eager"
           className={styles.sectionImage}
           src={"/images/main.webp"}
           alt={"Cariera Cosăuți"}
@@ -23,6 +24,7 @@ export const FirstSection = () => {
         />
       ) : (
         <Image
+          loading="eager"
           className={styles.sectionImage}
           src={"/images/mainTablet.webp"}
           alt={"Cariera Cosăuți"}

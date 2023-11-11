@@ -1,9 +1,10 @@
 .section {
-  max-width: 1620px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
 .sectionHeader {
+  margin-left: 150px;
   position: relative;
   padding: 10px 0;
   display: inline-block;
@@ -42,17 +43,72 @@
   font-style: normal;
   font-weight: 500;
   line-height: 1.16;
-  margin: 30px 0 56px 0;
+  margin: 30px 0 56px 150px;
 
   &:not(:first-of-type) {
-    margin: 72px 0 56px 0;
+    margin: 72px 0 56px 150px;
   }
 }
 
 .productsContainer {
-  display: flex;
-  flex-wrap: wrap;
+  max-width: 1620px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 24px;
   row-gap: 54px;
   justify-content: center;
+}
+
+@media (max-width: 1600px) {
+  .sectionHeader {
+    margin-left: 50px;
+  }
+
+  .sectionSubHeader {
+    margin-left: 50px;
+
+    &:not(:first-of-type) {
+      margin-left: 50px;
+    }
+  }
+}
+
+@media (max-width: 1700px) {
+  .productsContainer {
+    padding: 0 20px;
+    justify-items: center;
+    column-gap: 0;
+    max-width: 1420px;
+    row-gap: 45px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .sectionHeader {
+    padding-top: 7px;
+    padding-bottom: 10px;
+    margin-left: 24px;
+
+    &::before {
+      width: 3px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-left: 20px;
+    }
+  }
+
+  .sectionSubHeader {
+    margin-left: 24px;
+    font-size: 1.625rem;
+    margin-bottom: 40px;
+
+    &:not(:first-of-type) {
+      margin-left: 24px;
+      margin-top: 45px;
+      margin-bottom: 32px;
+    }
+  }
 }

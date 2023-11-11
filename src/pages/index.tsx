@@ -26,14 +26,7 @@ const IndexPage = () => {
       <main>
         <FirstSection />
         <AboutUs />
-
-        {/* 
-        
         <Production />
-        
-              
-        */}
-
         <Galery />
         <Politics />
         <ResourcesAvailability />

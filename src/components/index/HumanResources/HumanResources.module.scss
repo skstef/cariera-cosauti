@@ -105,7 +105,8 @@
 
 @media (max-width: 1100px) {
   .section {
-    min-height: 868px;
+    min-height: auto;
+    padding-bottom: 45px;
   }
 
   .sectionHeader {
@@ -189,5 +190,9 @@
   .contactFormSubmitBtnWrapper {
     flex-basis: 100%;
     margin-top: 10px;
+  }
+
+  .sectionImage {
+    height: 100%;
   }
 }

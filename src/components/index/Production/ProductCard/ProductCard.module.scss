@@ -77,3 +77,66 @@
   color: white;
   transform: rotateY(180deg);
 }
+
+@media (max-width: 1700px) {
+  .flipCard {
+    height: 380px;
+    width: 320px;
+  }
+
+  .flipCardFront {
+    img {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1440px) {
+  .flipCard {
+    height: 310px;
+    width: 250px;
+  }
+
+  .flipCardFront {
+    img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+    }
+  }
+
+  .firstRow,
+  .secondRow,
+  .productName {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .flipCard {
+    width: 168px;
+    height: 198px;
+  }
+
+  .flipCardFront {
+    img {
+      width: 168px;
+      height: 168px;
+      object-fit: cover;
+    }
+  }
+
+  .productName {
+    margin-top: 7px;
+  }
+
+  .firstRow,
+  .secondRow,
+  .productName {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 1.71;
+  }
+}
