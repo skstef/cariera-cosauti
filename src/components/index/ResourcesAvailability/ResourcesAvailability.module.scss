@@ -61,3 +61,63 @@
   margin-top: 82px;
   color: #191a19;
 }
+
+@media (max-width: 1600px) {
+  .section {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .image {
+    min-width: 50%;
+
+    & > img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .section {
+    flex-direction: column-reverse;
+    padding: 36px 24px 50px 24px;
+  }
+
+  .resourcesAvailabilityHeader {
+    margin-right: auto;
+
+    &::before {
+      width: 3px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-left: 20px;
+    }
+  }
+
+  .image {
+    margin-top: 0;
+  }
+
+  .right {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+
+    p {
+      margin-top: 55px;
+      margin-bottom: 40px;
+      font-size: 1.1875rem;
+    }
+  }
+
+  .btn {
+    margin-top: 50px;
+    padding: 14px 24px;
+  }
+}

@@ -1,17 +1,29 @@
 import React from "react";
 import styles from "./ResourcesAvailability.module.scss";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
 
 export const ResourcesAvailability = () => {
+  const isDesktop = useMediaQuery("(min-width:1100px)");
+
   return (
     <section className={styles.section}>
       <div className={styles.image}>
-        <Image
-          src="/images/resourcesAvailability.webp"
-          alt="Despre noi"
-          width={997}
-          height={553}
-        />
+        {isDesktop ? (
+          <Image
+            src="/images/resourcesAvailability.webp"
+            alt="Despre noi"
+            width={997}
+            height={553}
+          />
+        ) : (
+          <Image
+            src="/images/resourcesAvailabilityTablet.webp"
+            alt="Despre noi"
+            width={720}
+            height={399}
+          />
+        )}
       </div>
 
       <div className={styles.right}>
