@@ -30,10 +30,11 @@ const IndexPage = () => {
         {/* 
         
         <Production />
-        <Galery />
+        
               
         */}
 
+        <Galery />
         <Politics />
         <ResourcesAvailability />
         <Certificates />
