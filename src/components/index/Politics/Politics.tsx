@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Politics.module.scss";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
 
 const politicsList = [
   {
@@ -22,6 +23,8 @@ const politicsList = [
 ];
 
 export const Politics = () => {
+  const isDesktop = useMediaQuery("(min-width:1100px)");
+
   return (
     <section id="policies" className={styles.section}>
       <div className={styles.sectionWrapper}>
@@ -45,13 +48,23 @@ export const Politics = () => {
         </div>
       </div>
 
-      <Image
-        className={styles.sectionImage}
-        src="/images/politics.webp"
-        width={1920}
-        height={732}
-        alt="Politicile de bază"
-      />
+      {isDesktop ? (
+        <Image
+          className={styles.sectionImage}
+          src="/images/politics.webp"
+          width={1920}
+          height={732}
+          alt="Politicile de bază"
+        />
+      ) : (
+        <Image
+          className={styles.sectionImage}
+          src="/images/politicsTablet.webp"
+          width={1920}
+          height={732}
+          alt="Politicile de bază"
+        />
+      )}
     </section>
   );
 };
