@@ -38,7 +38,7 @@ export const FirstSection = () => {
           <h1>
             Cariera <span>Cosăuți</span>
           </h1>
-          <h3>Noi creăm baza viitorului</h3>
+          <h2>Noi creăm baza viitorului</h2>
         </div>
 
         <Button

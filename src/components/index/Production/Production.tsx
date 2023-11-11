@@ -10,9 +10,9 @@ export const Production = () => {
         <h3>Producția</h3>
       </div>
 
-      <h5 className={styles.sectionSubHeader}>
+      <h4 className={styles.sectionSubHeader}>
         Agregate pentru asfalt și beton
-      </h5>
+      </h4>
 
       <div className={styles.productsContainer}>
         {firstProducts.map((el) => (
@@ -26,9 +26,9 @@ export const Production = () => {
         ))}
       </div>
 
-      <h5 className={styles.sectionSubHeader}>
+      <h4 className={styles.sectionSubHeader}>
         Materiale pentru design și amenajare
-      </h5>
+      </h4>
 
       <div className={styles.productsContainer}>
         {secondProducts.map((el) => (

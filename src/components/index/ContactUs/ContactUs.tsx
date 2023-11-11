@@ -8,6 +8,7 @@ import {
   styled,
 } from "@mui/material";
 import Image from "next/image";
+import Link from "next/link";
 
 const StyledTextField = styled(TextField)`
   & label.Mui-focused {
@@ -125,7 +126,8 @@ export const ContactUs = () => {
               control={<Checkbox defaultChecked />}
               label={
                 <p className={styles.contactFormCheckboxLabel}>
-                  Sunt de acord cu <a>Termeni și condiții</a>
+                  Sunt de acord cu{" "}
+                  <Link href="/termeni-si-conditii">Termeni și condiții</Link>
                 </p>
               }
             />
@@ -173,6 +175,7 @@ export const ContactUs = () => {
             </div>
 
             <iframe
+              title="Google maps"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10629.985089045143!2d28.3094434!3d48.2355735!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ccc31e748b306d%3A0x8ed0c1fc7b4f3a78!2sCariera%20de%20Granit%20%C5%9Fi%20Pietri%C5%9F%20din%20Soroca!5e0!3m2!1sru!2s!4v1697579848028!5m2!1sru!2s"
               width="428"
               height="424"
