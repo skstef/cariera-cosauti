@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: flex-start;
 
-  max-width: 1620px;
+  max-width: 1920px;
+  padding: 0 150px;
   margin: 0 auto;
 }
 
@@ -64,5 +65,50 @@
 
   ul {
     margin-left: 35px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .section {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .section {
+    padding: 0 24px;
+  }
+
+  .sectionHeader {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    margin-top: 100px;
+
+    &::before {
+      width: 3px;
+    }
+
+    h3 {
+      font-size: 2rem;
+      margin-left: 20px;
+
+      span {
+        color: #fff;
+      }
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .section p {
+    font-size: 1.1875rem;
+    margin-top: 25px;
+    margin-bottom: 30px;
+
+    span {
+      font-size: 1.5rem;
+    }
   }
 }
