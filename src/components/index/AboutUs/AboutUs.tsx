@@ -3,8 +3,10 @@ import styles from "./AboutUs.module.scss";
 import { Button, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 import Router from "next/router";
+import { useTranslation } from "next-i18next";
 
 export const AboutUs = () => {
+  const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
 
   const viewMoreDetails = () => {
@@ -15,17 +17,13 @@ export const AboutUs = () => {
     <section id="about_us" className={styles.section}>
       <div className={styles.left}>
         <div className={styles.aboutUsHeader}>
-          <h3>Despre companie</h3>
+          <h3>{t("aboutUs_title")}</h3>
         </div>
         <p>
-          SA „Cariera de Granit și Pietriș din Soroca” este situată pe versantul
-          drept al terasei inundate a râului Nistru, la o distanță de 0,5 km est
-          de satul Cosăuți, raionul Soroca, Republica Moldova.
+          {t("aboutUs_contentLine1")}
           <br />
           <br />
-          Până în 1970, cariera extrăgea piatră de carieră, care era recoltată
-          și încărcată manual în mijloacele de transport. În carieră a fost
-          instalat un concasor pentru producerea pietrișului calcaros.
+          {t("aboutUs_contentLine2")}
         </p>
 
         <Button
@@ -33,7 +31,7 @@ export const AboutUs = () => {
           variant="contained"
           className={styles.btn}
         >
-          Află mai multe
+          {t("aboutUs_btn")}
         </Button>
       </div>
       <div className={styles.image}>

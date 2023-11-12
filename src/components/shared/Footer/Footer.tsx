@@ -3,8 +3,10 @@ import styles from "./Footer.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 export const Footer = () => {
+  const { t } = useTranslation();
   const isDesktop = useMediaQuery("(min-width:1100px)");
 
   return (
@@ -34,18 +36,18 @@ export const Footer = () => {
 
       <nav className={styles.nav}>
         <Link href="/about-us" className={styles.navLink}>
-          Despre noi
+          {t("footer_aboutUs")}
         </Link>
         <Link href="/termeni-si-conditii" className={styles.navLink}>
-          Termeni și condiții
+          {t("footer_termsAndConditions")}
         </Link>
         <Link href="/#contact_us" className={styles.navLink}>
-          Contacte
+          {t("footer_contacts")}
         </Link>
       </nav>
 
       <div className={styles.socials}>
-        <p className={styles.followUs}>Urmărește-ne</p>
+        <p className={styles.followUs}> {t("footer_subscribeUs")}</p>
 
         {/* <a target="_blank" className={styles.socialsIcon}>
           <Image

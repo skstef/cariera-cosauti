@@ -3,8 +3,10 @@ import styles from "./HeaderMobile.module.scss";
 import Link from "next/link";
 import Image from "next/image";
 import { LanguangeChange } from "../../LanguangeChange/LanguangeChange";
+import { useTranslation } from "next-i18next";
 
 export const HeaderMobile = () => {
+  const { t } = useTranslation("common");
   const [isMenuOpened, setMenuOpened] = useState(false);
 
   const toggleOpenMenu = () => {
@@ -46,28 +48,43 @@ export const HeaderMobile = () => {
       >
         <nav className={styles.nav}>
           <ul className={styles.elementsList}>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#about_us">Despre Noi</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#about_us">
+                {t("header_aboutUs")}
+              </Link>
             </li>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#production">Producția</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#production">
+                {t("header_production")}
+              </Link>
             </li>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#galery">Galeria</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#galery">
+                {t("header_gallery")}
+              </Link>
             </li>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#parteners">Parteneri</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#parteners">
+                {t("header_parteners")}
+              </Link>
             </li>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#policies">Politici</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#policies">
+                {t("header_politics")}
+              </Link>
             </li>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#contact_us">Contacte</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#contact_us">
+                {t("header_contacts")}
+              </Link>
             </li>
-            <li className={styles.menuItem} onClick={onMenuElementClick}>
-              <Link href="/#human_resources">Cadre</Link>
+            <li className={styles.menuItem}>
+              <Link onClick={onMenuElementClick} href="/#human_resources">
+                {t("header_hr")}
+              </Link>
             </li>
           </ul>
+          Z
         </nav>
       </div>
     </>

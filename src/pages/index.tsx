@@ -11,6 +11,7 @@ import { Certificates } from "@/components/index/Certificates/Certificates";
 import { Parteners } from "@/components/index/Parteners/Parteners";
 import { ContactUs } from "@/components/index/ContactUs/ContactUs";
 import { HumanResources } from "@/components/index/HumanResources/HumanResources";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const IndexPage = () => {
   return (
@@ -39,5 +40,11 @@ const IndexPage = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: await serverSideTranslations(locale, ["index", "common"]),
+  };
+}
 
 export default IndexPage;

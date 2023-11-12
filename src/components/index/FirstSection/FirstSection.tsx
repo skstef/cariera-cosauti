@@ -3,9 +3,11 @@ import styles from "./FirstSection.module.scss";
 import Image from "next/image";
 import { Button, useMediaQuery } from "@mui/material";
 import Router from "next/router";
+import { useTranslation } from "next-i18next";
 
 export const FirstSection = () => {
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const { t } = useTranslation("index");
 
   const viewProduction = () => {
     Router.push("/#production");
@@ -38,7 +40,7 @@ export const FirstSection = () => {
           <h1>
             Cariera <span>Cosăuți</span>
           </h1>
-          <h2>Noi creăm baza viitorului</h2>
+          <h2>{t("firstSection_subTitle")}</h2>
         </div>
 
         <Button
@@ -46,7 +48,7 @@ export const FirstSection = () => {
           className={styles.goToProductionBtn}
           variant="contained"
         >
-          Vezi producția
+          {t("firstSection_btn")}
         </Button>
       </div>
     </section>

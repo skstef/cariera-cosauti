@@ -2,23 +2,26 @@ import React from "react";
 import styles from "./Production.module.scss";
 import { firstProducts, secondProducts } from "./products";
 import { ProductCard } from "./ProductCard/ProductCard";
+import { useTranslation } from "next-i18next";
 
 export const Production = () => {
+  const { t } = useTranslation("index");
+
   return (
     <section id="production" className={styles.section}>
       <div className={styles.sectionHeader}>
-        <h3>Producția</h3>
+        <h3>{t("production_title")}</h3>
       </div>
 
       <h4 className={styles.sectionSubHeader}>
-        Agregate pentru asfalt și beton
+        {t("production_firstSubTitle")}
       </h4>
 
       <div className={styles.productsContainer}>
         {firstProducts.map((el) => (
           <ProductCard
             key={el.image}
-            name={el.name}
+            name={t(el.name)}
             image={el.image}
             descriptionFirstRow={el.descriptionFirstRow}
             descriptionSecondRow={el.descriptionSecondRow}
@@ -27,14 +30,14 @@ export const Production = () => {
       </div>
 
       <h4 className={styles.sectionSubHeader}>
-        Materiale pentru design și amenajare
+        {t("production_secondSubTitle")}
       </h4>
 
       <div className={styles.productsContainer}>
         {secondProducts.map((el) => (
           <ProductCard
             key={el.image}
-            name={el.name}
+            name={t(el.name)}
             image={el.image}
             descriptionFirstRow={el.descriptionFirstRow}
             descriptionSecondRow={el.descriptionSecondRow}

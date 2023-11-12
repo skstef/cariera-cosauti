@@ -3,8 +3,11 @@ import styles from "./HeaderDesktop.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { LanguangeChange } from "../../LanguangeChange/LanguangeChange";
+import { useTranslation } from "next-i18next";
 
 export const HeaderDesktop = () => {
+  const { t } = useTranslation("common");
+
   return (
     <header className={styles.header}>
       <Link href="/">
@@ -13,25 +16,25 @@ export const HeaderDesktop = () => {
       <nav className={styles.nav}>
         <ul className={styles.topMenu}>
           <li className={styles.menuItem}>
-            <Link href="/#about_us">Despre Noi</Link>
+            <Link href="/#about_us">{t("header_aboutUs")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#production">Producția</Link>
+            <Link href="/#production">{t("header_production")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#galery">Galeria</Link>
+            <Link href="/#galery">{t("header_gallery")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#parteners">Parteneri</Link>
+            <Link href="/#parteners">{t("header_parteners")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#policies">Politici</Link>
+            <Link href="/#policies">{t("header_politics")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#contact_us">Contacte</Link>
+            <Link href="/#contact_us">{t("header_contacts")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#human_resources">Cadre</Link>
+            <Link href="/#human_resources">{t("header_hr")}</Link>
           </li>
         </ul>
       </nav>

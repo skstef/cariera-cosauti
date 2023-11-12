@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 const StyledTextField = styled(TextField)`
   & label.Mui-focused {
@@ -34,6 +35,8 @@ const StyledTextField = styled(TextField)`
 `;
 
 export const ContactUs = () => {
+  const { t } = useTranslation("index");
+
   return (
     <section id="contact_us" className={styles.section}>
       <Image

@@ -3,8 +3,9 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@emotion/react";
 import { StyledEngineProvider, createTheme } from "@mui/material";
+import { appWithTranslation } from "next-i18next";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   const theme = createTheme({
     typography: {
       fontFamily: ['"Lato"', "sans-serif"].join(","),
@@ -22,4 +23,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </ThemeProvider>
     </StyledEngineProvider>
   );
-}
+};
+
+export default appWithTranslation(App);

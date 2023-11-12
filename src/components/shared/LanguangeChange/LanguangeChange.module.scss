@@ -21,15 +21,16 @@
 .languages {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   background: transparent;
-  padding: 8px 30px 8px 8px;
+  padding: 8px 7px 8px 8px;
   position: absolute;
   z-index: 99999;
   bottom: -80px;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   transition: all 0.1s;
+  background: rgba(33, 33, 34, 0.8);
 }
 
 .langBtn {
@@ -38,10 +39,22 @@
   outline: none;
   cursor: pointer;
   transition: all 0.1s;
+  display: flex;
+  align-items: center;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.langName {
+  font-size: 0.625rem;
+  margin-left: 6px;
+  color: white;
 }
 
 @media (max-width: 1440px) {

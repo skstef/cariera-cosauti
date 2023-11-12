@@ -5,6 +5,7 @@ import { Footer } from "@/components/shared/Footer/Footer";
 import { Mission } from "@/components/about-us/Mission/Mission";
 import { Video } from "@/components/about-us/Video/Video";
 import { AboutCompany } from "@/components/about-us/AboutCompany/AboutCompany";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 const AboutUs = () => {
   return (
@@ -26,5 +27,11 @@ const AboutUs = () => {
     </>
   );
 };
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  return {
+    props: await serverSideTranslations(locale, ["about-us", "common"]),
+  };
+}
 
 export default AboutUs;
