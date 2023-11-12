@@ -1,8 +1,11 @@
 import React from "react";
 import styles from "./AboutCompany.module.scss";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
 
 export const AboutCompany = () => {
+  const isDesktop = useMediaQuery("(min-width:1100px)");
+
   return (
     <section className={styles.section}>
       <div className={styles.sectionWrapper}>
@@ -104,15 +107,15 @@ export const AboutCompany = () => {
             <h5 className={styles.cardTitle}>Capacitatea fabricii</h5>
 
             <p className={styles.cardData}>
-              Fracția 0-5 mm – 300 mii t/an;
+              0-5 mm – 300 mii t/an;
               <br />
-              Fracția 5-10 mm – 100 mii t/an;
+              5-10 mm – 100 mii t/an;
               <br />
-              Fracția 10-20 mm – 150 mii t/an;
+              10-20 mm – 150 mii t/an;
               <br />
-              Fracția 20-40 mm – 200 mii t/an;
+              20-40 mm – 200 mii t/an;
               <br />
-              Fracția 20-70 mm. – 400 mii t/an.
+              20-70 mm. – 400 mii t/an.
             </p>
           </div>
 
@@ -128,21 +131,31 @@ export const AboutCompany = () => {
             <h5 className={styles.cardTitle}>Investiții în active</h5>
 
             <p className={styles.cardData}>
-              În perioada 2009 – 2020, acționarii carierei au efectuat
-              investiții semnificative în activele fixe ale întreprinderii, în
-              vederea modernizării și creșterii volumului producției finite.
+              În perioada 2009 – 2020, acționarii au efectuat investiții
+              semnificative în activele fixe, în vederea modernizării și
+              creșterii volumului producției finite.
             </p>
           </div>
         </div>
       </div>
 
-      <Image
-        className={styles.sectionImage}
-        src="/images/about_bg.webp"
-        width={1920}
-        height={1000}
-        alt="about"
-      />
+      {isDesktop ? (
+        <Image
+          className={styles.sectionImage}
+          src="/images/about_bg.webp"
+          width={1920}
+          height={1000}
+          alt="about"
+        />
+      ) : (
+        <Image
+          className={styles.sectionImage}
+          src="/images/about_bg_tablet.webp"
+          width={768}
+          height={985}
+          alt="about"
+        />
+      )}
     </section>
   );
 };

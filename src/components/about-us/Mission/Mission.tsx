@@ -5,10 +5,7 @@ export const Mission = () => {
   return (
     <section className={styles.section}>
       <div className={styles.sectionHeader}>
-        <h3>
-          Misiunea și
-          <br /> <span>obiectivele</span>
-        </h3>
+        <h3>Misiunea și obiectivele</h3>
       </div>
 
       <div className={styles.content}>
