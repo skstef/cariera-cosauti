@@ -12,9 +12,9 @@ export const TermsOfUse = () => {
         </h3>
       </div>
 
-      <p>
+      <div className={styles.termsOfUse}>
         <TermsRo />
-      </p>
+      </div>
     </section>
   );
 };

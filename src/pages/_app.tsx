@@ -1,5 +1,6 @@
 import "normalize.css";
 import "@/styles/globals.css";
+import "@/styles/fonts.scss";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "@emotion/react";
 import { StyledEngineProvider, createTheme } from "@mui/material";
