@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import styles from "./Galery.module.scss";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 const images = [
   "/images/gallery-1.webp",
@@ -35,6 +36,7 @@ const items = images.map((el) => (
 ));
 
 export const Galery = () => {
+  const { t } = useTranslation("index");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleScrollLeft = () => {
@@ -52,8 +54,8 @@ export const Galery = () => {
   return (
     <section id="galery" className={styles.section}>
       <div className={styles.sectionHeader}>
-        <h3>Galerie foto</h3>
-        <p>Soliditate, Eleganță, Perseverență</p>
+        <h3>{t("gallery_title")}</h3>
+        <p>{t("gallery_subTitle")}</p>
       </div>
 
       <div className={styles.imagesCarouselWrapper}>
@@ -62,7 +64,7 @@ export const Galery = () => {
             width={104}
             height={130}
             src="/images/leftArrow.webp"
-            alt="left arrow"
+            alt="left"
             draggable="false"
           />
         </button>
@@ -74,7 +76,7 @@ export const Galery = () => {
             width={104}
             height={130}
             src="/images/rightArrow.webp"
-            alt="right arrow"
+            alt="right"
             draggable="false"
           />
         </button>

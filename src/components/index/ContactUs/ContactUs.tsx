@@ -44,12 +44,12 @@ export const ContactUs = () => {
         src="/images/contact_bg.webp"
         width={1920}
         height={914}
-        alt="Formular de contact"
+        alt={t("contactUs_title")}
       />
 
       <div className={styles.sectionContents}>
         <div className={styles.sectionHeader}>
-          <h3>Formular de contact</h3>
+          <h3>{t("contactUs_title")}</h3>
         </div>
 
         <div className={styles.contents}>
@@ -58,7 +58,7 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormInput}
                 id="surname"
-                label="Nume"
+                label={t("contactUs_surname")}
                 autoComplete="surname"
                 InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
                 sx={{
@@ -70,7 +70,7 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormInput}
                 id="name"
-                label="Prenume"
+                label={t("contactUs_name")}
                 autoComplete="name"
                 InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
                 sx={{
@@ -84,7 +84,7 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormInput}
                 id="phone"
-                label="Telefon"
+                label={t("contactUs_phone")}
                 autoComplete="phone"
                 InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
                 sx={{
@@ -96,7 +96,7 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormInput}
                 id="email"
-                label="Email"
+                label={t("contactUs_email")}
                 autoComplete="email"
                 InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
                 sx={{
@@ -111,7 +111,7 @@ export const ContactUs = () => {
               className={styles.contactFormTextField}
               fullWidth
               id="message"
-              label="Mesaj"
+              label={t("contactUs_message")}
               autoComplete="message"
               multiline
               rows={6}
@@ -129,8 +129,10 @@ export const ContactUs = () => {
               control={<Checkbox defaultChecked />}
               label={
                 <p className={styles.contactFormCheckboxLabel}>
-                  Sunt de acord cu{" "}
-                  <Link href="/termeni-si-conditii">Termeni și condiții</Link>
+                  {t("contactUs_agree")}
+                  <Link href="/termeni-si-conditii">
+                    {t("contactUs_termsAndConditions")}
+                  </Link>
                 </p>
               }
             />
@@ -140,41 +142,20 @@ export const ContactUs = () => {
               variant="contained"
               type="submit"
             >
-              Trimite
+              {t("contactUs_submit")}
             </Button>
           </form>
 
           <div className={styles.address}>
             <div className={styles.addressBox}>
-              <p className={styles.addressHeader}>Adresa</p>
+              <p className={styles.addressHeader}>
+                {t("contactUs_addressTitle")}
+              </p>
 
-              <address className={styles.addressData}>
-                str. Cosăuți 4, MD 3000,
-                <br />
-                or. Soroca, Republica Moldova
-                <br />
-                <br />
-                e-mail:
-                <br />
-                carieracosauti@mail.ru
-                <br />
-                tel/fax: +373 230 20710
-                <br />
-                <br />
-                Secția comercială
-                <br />
-                tel: +373 230 20722
-                <br />
-                <br />
-                Laborator
-                <br />
-                tel: +373 230 20730
-                <br />
-                <br />
-                Contabilitate
-                <br />
-                tel: +373 230 20712
-              </address>
+              <address
+                className={styles.addressData}
+                dangerouslySetInnerHTML={{ __html: t("contactUs_addressBox") }}
+              />
             </div>
 
             <iframe

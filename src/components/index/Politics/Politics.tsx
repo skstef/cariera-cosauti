@@ -2,38 +2,38 @@ import React from "react";
 import styles from "./Politics.module.scss";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
-
-const politicsList = [
-  {
-    name: "Politica personalului",
-    number: 1,
-  },
-  {
-    name: "Politica calității",
-    number: 2,
-  },
-  {
-    name: "Politica ecologică",
-    number: 3,
-  },
-  {
-    name: "Politica investițională",
-    number: 4,
-  },
-];
+import { useTranslation } from "next-i18next";
 
 export const Politics = () => {
+  const { t } = useTranslation("index");
+
   const isDesktop = useMediaQuery("(min-width:1100px)");
+
+  const politicsList = [
+    {
+      name: t("policies_cardTitle_1"),
+      number: 1,
+    },
+    {
+      name: t("policies_cardTitle_2"),
+      number: 2,
+    },
+    {
+      name: t("policies_cardTitle_3"),
+      number: 3,
+    },
+    {
+      name: t("policies_cardTitle_4"),
+      number: 4,
+    },
+  ];
 
   return (
     <section id="policies" className={styles.section}>
       <div className={styles.sectionWrapper}>
         <div className={styles.sectionHeader}>
-          <h3>Politicile de bază</h3>
-          <p>
-            Politici solide și responsabile - cheia succesului în activitatea
-            noastră
-          </p>
+          <h3>{t("policies_title")}</h3>
+          <p>{t("policies_subTitle")}</p>
         </div>
 
         <div className={styles.cardsWrapper}>

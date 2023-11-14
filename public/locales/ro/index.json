@@ -21,5 +21,45 @@
   "production_itemTitle_9": "Piatră de calcar",
   "production_itemTitle_10": "Piatră concasată de calcar 8*16",
   "production_itemTitle_11": "Piatră concasată de calcar 4*8",
-  "production_itemTitle_12": "Gabion"
+  "production_itemTitle_12": "Gabion",
+
+  "gallery_title": "Galerie foto",
+  "gallery_subTitle": "Soliditate, Eleganță, Perseverență",
+
+  "policies_title": "Politicile de bază",
+  "policies_subTitle": "Politici solide și responsabile - cheia succesului în activitatea noastră",
+  "policies_cardTitle_1": "Politica personalului",
+  "policies_cardTitle_2": "Politica calității",
+  "policies_cardTitle_3": "Politica ecologică",
+  "policies_cardTitle_4": "Politica investițională",
+
+  "resourcesAvailability_title": "Disponibilitatea resurselor",
+  "resourcesAvailability_content": "SA „Cariera de Granit si Pietris din Soroca” e unica carieră de granit din țara noastră. <br /> <br /> În ceea ce privește disponibilitatea resurselor, zăcămintele de granit cuprind cca 22 milioane m³ de rocă, ceea ce corespunde unui total de aproximativ 56 milioane de tone, având un rol extrem de important în asigurarea RM cu resurse minerale autohtone, de calitate înaltă. Astfel, împreună cu partenerii noștri, <span>Construim Viitorul pe Baza Calității!</span>",
+
+  "certificates_title": "Certificate și standarde",
+
+  "humanResources_title": "Cadre",
+  "humanResources_subTitle": "Fii parte din echipa noastră de profesioniști",
+  "humanResources_nameSurname": "Nume Prenume",
+  "humanResources_phone": "Telefon ",
+  "humanResources_email": "E-mail",
+  "humanResources_position": "Funcția",
+  "humanResources_message": "Mesaj",
+  "humanResources_upload": "Încarcă fișierul/CV",
+  "humanResources_submit": "Trimite",
+
+  "parteners_title": "Parteneri",
+  "parteners_subTitle": "Construim împreună baze solide pentru un viitor durabil",
+
+  "contactUs_title": "Formular de contact",
+  "contactUs_name": "Prenume",
+  "contactUs_surname": "Nume",
+  "contactUs_phone": "Telefon",
+  "contactUs_email": "E-mail",
+  "contactUs_message": "Mesaj",
+  "contactUs_agree": "Sunt de acord cu ",
+  "contactUs_termsAndConditions": "Termeni și condiții",
+  "contactUs_submit": "Trimite",
+  "contactUs_addressTitle": "Adresa:",
+  "contactUs_addressBox": "str. Cosăuți 4, MD 3000, <br /> or. Soroca, Republica Moldova <br /> <br /> e-mail: <br /> carieracosauti@mail.ru <br /> tel/fax: +373 230 20710 <br /> <br /> Secția comercială <br /> tel: +373 230 20722 <br /> <br /> Laborator <br /> tel: +373 230 20730 <br /> <br /> Contabilitate <br /> tel: +373 230 20712"
 }

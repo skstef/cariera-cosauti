@@ -3,6 +3,7 @@ import styles from "./HumanResources.module.scss";
 import Image from "next/image";
 import { Button, TextField, styled, useMediaQuery } from "@mui/material";
 import { MuiFileInput } from "mui-file-input";
+import { useTranslation } from "next-i18next";
 
 const StyledTextField = styled(TextField)`
   & label.Mui-focused {
@@ -46,6 +47,7 @@ const StyledFileInput = styled(MuiFileInput)`
 `;
 
 export const HumanResources = () => {
+  const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
 
   const [cvFile, setCvFile] = useState<File | null>(null);
@@ -58,15 +60,15 @@ export const HumanResources = () => {
     <section id="human_resources" className={styles.section}>
       <div className={styles.contentContainer}>
         <div className={styles.sectionHeader}>
-          <h3>Cadre</h3>
-          <p>Fii parte din echipa noastră de profesioniști</p>
+          <h3>{t("humanResources_title")}</h3>
+          <p>{t("humanResources_subTitle")}</p>
         </div>
 
         <form className={styles.contactForm}>
           <StyledTextField
             className={styles.contactFormInput}
             id="nameSurname"
-            label="Nume Prenume"
+            label={t("humanResources_nameSurname")}
             autoComplete="nameSurname"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
           />
@@ -74,7 +76,7 @@ export const HumanResources = () => {
           <StyledTextField
             className={styles.contactFormInput}
             id="phone"
-            label="Telefon"
+            label={t("humanResources_phone")}
             autoComplete="phone"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
           />
@@ -82,7 +84,7 @@ export const HumanResources = () => {
           <StyledTextField
             className={styles.contactFormInput}
             id="email"
-            label="Email"
+            label={t("humanResources_email")}
             autoComplete="email"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
           />
@@ -90,7 +92,7 @@ export const HumanResources = () => {
           <StyledTextField
             className={styles.contactFormInput}
             id="job"
-            label="Funcția"
+            label={t("humanResources_position")}
             autoComplete="job"
             InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
           />
@@ -99,7 +101,7 @@ export const HumanResources = () => {
             className={styles.contactFormTextField}
             fullWidth
             id="message"
-            label="Mesaj"
+            label={t("humanResources_message")}
             autoComplete="message"
             multiline
             rows={6}
@@ -108,7 +110,7 @@ export const HumanResources = () => {
 
           <StyledFileInput
             className={styles.contactFormFileInput}
-            placeholder="Încarcă fișierul/CV"
+            placeholder={t("humanResources_upload")}
             value={cvFile}
             //@ts-ignore
             onChange={handleCvFileChange}
@@ -121,7 +123,7 @@ export const HumanResources = () => {
               variant="contained"
               type="submit"
             >
-              Trimite
+              {t("humanResources_submit")}
             </Button>
           </div>
         </form>

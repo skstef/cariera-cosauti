@@ -21,5 +21,45 @@
   "production_itemTitle_9": "Песчаник",
   "production_itemTitle_10": "Щебень песчаника 8*16",
   "production_itemTitle_11": "Щебень песчаника 4*8 ",
-  "production_itemTitle_12": "Габион"
+  "production_itemTitle_12": "Габион",
+
+  "gallery_title": "Галерея",
+  "gallery_subTitle": "Солидность, элегантность, стойкость",
+
+  "policies_title": "Основные политики",
+  "policies_subTitle": "Солидные и ответственные политики - залог успеха нашей деятельности",
+  "policies_cardTitle_1": "Политика персонала",
+  "policies_cardTitle_2": "Политика качества",
+  "policies_cardTitle_3": "Экологическая политика",
+  "policies_cardTitle_4": "Инвестиционная политика",
+
+  "resourcesAvailability_title": "Доступность ресурсов",
+  "resourcesAvailability_content": "АО \"Сорокский гранитно-гравийный карьер\" является единственным гранитным карьером в нашей стране. <br /> <br />  По ресурсной обеспеченности гранитные месторождения составляют около 22 млн. м³ породы, что соответствует примерно 56 млн. тонн, играя чрезвычайно важную роль в обеспечении Республики Молдова высококачественными местными минеральными ресурсами. Таким образом, вместе с нашими партнерами <span>мы строим будущее на качестве!</span>",
+
+  "certificates_title": "Сертификаты и стандарты",
+
+  "humanResources_title": "Кадры",
+  "humanResources_subTitle": "Станьте частью нашей команды профессионалов",
+  "humanResources_nameSurname": "Имя Фамилия",
+  "humanResources_phone": "Телефон",
+  "humanResources_email": "Электронная почта",
+  "humanResources_position": "Должность",
+  "humanResources_message": "Сообщение",
+  "humanResources_upload": "Загрузить файл/CV",
+  "humanResources_submit": "Отправить",
+
+  "parteners_title": "Партнёры",
+  "parteners_subTitle": "Создавая вместе прочный фундамент для устойчивого будущего",
+
+  "contactUs_title": "Контактная форма",
+  "contactUs_name": "Имя",
+  "contactUs_surname": "Фамилия",
+  "contactUs_phone": "Телефон",
+  "contactUs_email": "Электронная почта",
+  "contactUs_message": "Сообщение",
+  "contactUs_agree": "Я согласен с ",
+  "contactUs_termsAndConditions": "Условиями и положениями",
+  "contactUs_submit": "Отправить",
+  "contactUs_addressTitle": "Адрес:",
+  "contactUs_addressBox": "ул. Косэуць 4, MD 3000, <br /> г. Сороки, Республика Молдова <br /> <br /> Электронная почта: <br /> carieracosauti@mail.ru <br /> тел/факс: +373 230 20710 <br /> <br /> Коммерческий отдел: <br /> тел: +373 230 20722 <br /> <br /> Лаборатория: <br /> тел: +373 230 20730 <br /> <br /> Бухгалтерия: <br /> тел: +373 230 20712"
 }

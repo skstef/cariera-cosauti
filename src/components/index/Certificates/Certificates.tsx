@@ -2,14 +2,16 @@ import React from "react";
 import styles from "./Certificates.module.scss";
 import Image from "next/image";
 import { useMediaQuery } from "@mui/material";
+import { useTranslation } from "next-i18next";
 
 export const Certificates = () => {
+  const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
 
   return (
     <section className={styles.section}>
       <div className={styles.sectionHeader}>
-        <h3>Certificate și standarde</h3>
+        <h3>{t("certificates_title")}</h3>
       </div>
 
       <div className={styles.certificatesContainer}>
