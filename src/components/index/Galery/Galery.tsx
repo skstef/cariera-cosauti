@@ -20,21 +20,6 @@ const images = [
   "/images/gallery-14.webp",
 ];
 
-const items = images.map((el) => (
-  <div className={styles.imageWrapper} key={el}>
-    <Image
-      width={638}
-      height={803}
-      className={styles.image}
-      src={el}
-      draggable="false"
-      alt="Galerie"
-    />
-
-    <p>Gard gabiion</p>
-  </div>
-));
-
 export const Galery = () => {
   const { t } = useTranslation("index");
   const containerRef = useRef<HTMLDivElement>(null);
@@ -50,6 +35,21 @@ export const Galery = () => {
       containerRef.current.scrollBy({ left: 500, behavior: "smooth" });
     }
   };
+
+  const items = images.map((el, index) => (
+    <div className={styles.imageWrapper} key={el}>
+      <Image
+        width={638}
+        height={803}
+        className={styles.image}
+        src={el}
+        draggable="false"
+        alt="Galerie"
+      />
+
+      <p>{t(`gallery_image_${index + 1}`)}</p>
+    </div>
+  ));
 
   return (
     <section id="galery" className={styles.section}>
