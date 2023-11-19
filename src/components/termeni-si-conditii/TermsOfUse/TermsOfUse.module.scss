@@ -56,6 +56,7 @@
   margin-bottom: 100px;
 
   p {
+    font-family: Qanelas;
     line-height: 1.1;
   }
 
@@ -107,13 +108,52 @@
     }
   }
 
-  .section p {
+  .termsOfUse {
     font-size: 1.1875rem;
     margin-top: 25px;
     margin-bottom: 30px;
 
     span {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .section {
+    padding: 0 16px;
+  }
+
+  .sectionHeader {
+    margin-top: 84px;
+    padding-top: 8px;
+    padding-bottom: 14px;
+
+    &::before {
+      width: 4px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+
+      span {
+        color: #e8cf7a;
+      }
+    }
+
+    br {
+      display: block;
+    }
+  }
+
+  .termsOfUse {
+    font-size: 0.875rem;
+    margin-top: 21px;
+    margin-bottom: 20px;
+
+    span {
+      font-size: 0.875rem;
     }
   }
 }
