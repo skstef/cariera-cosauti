@@ -25,12 +25,12 @@
   z-index: 999;
   left: 0;
   right: 0;
-  top: 78px;
+  top: 65px;
   bottom: 0;
-  background: #212122;
+  background: rgb(33, 33, 34);
   backdrop-filter: blur(2px);
   overflow-y: auto;
-  max-height: calc(100vh - 78px);
+  max-height: calc(100vh - 65px);
   opacity: 0;
   visibility: hidden;
   transition: all 0.1s;
@@ -47,8 +47,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 75px;
-  margin-bottom: 50px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
 .menuItem {
@@ -56,7 +56,7 @@
   cursor: pointer;
 
   &:not(&:last-child) {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
   }
 
   & > a {
@@ -130,5 +130,66 @@
   &::after {
     transform: rotate(90deg);
     bottom: 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .menuBurger {
+    &,
+    &::before,
+    &::after {
+      width: 17px;
+      height: 1px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+
+    &::after {
+      bottom: 5px;
+    }
+  }
+
+  .menuBurgerClose {
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .logoLink {
+    order: 1;
+  }
+
+  .menuBtn {
+    order: 2;
+    margin-left: auto;
+    margin-top: -2px;
+  }
+
+  .header {
+    padding: 15px;
+
+    & > div:nth-child(2) {
+      order: 3;
+      margin-left: 11px;
+      margin-right: 0;
+    }
+  }
+
+  .menuItem {
+    &:not(&:last-child) {
+      margin-bottom: 38px;
+    }
+  }
+
+  .menu {
+    top: 63px;
+    max-height: calc(100vh - 63px);
   }
 }

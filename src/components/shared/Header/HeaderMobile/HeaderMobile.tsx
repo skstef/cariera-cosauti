@@ -20,8 +20,9 @@ export const HeaderMobile = () => {
   return (
     <>
       <header className={styles.header}>
-        <Link href="/">
+        <Link className={styles.logoLink} href="/">
           <Image
+            className={styles.logo}
             alt="logo"
             src="/images/logoSmall.webp"
             width={37}
@@ -84,7 +85,6 @@ export const HeaderMobile = () => {
               </Link>
             </li>
           </ul>
-          Z
         </nav>
       </div>
     </>
