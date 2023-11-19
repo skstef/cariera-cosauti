@@ -6,6 +6,8 @@ import { useTranslation } from "next-i18next";
 
 export const AboutCompany = () => {
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const isMobile = useMediaQuery("(min-width:730px)");
+
   const { t } = useTranslation("about-us");
 
   return (
@@ -88,6 +90,14 @@ export const AboutCompany = () => {
           src="/images/about_bg.webp"
           width={1920}
           height={1000}
+          alt="about"
+        />
+      ) : isMobile ? (
+        <Image
+          className={styles.sectionImage}
+          src="/images/about_bg_mobile.webp"
+          width={768}
+          height={985}
           alt="about"
         />
       ) : (

@@ -272,3 +272,43 @@
     }
   }
 }
+
+@media (max-width: 730px) {
+  .right {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .section {
+    margin-top: 63px;
+  }
+
+  .sectionHeader {
+    margin-top: 20px;
+    padding: 9px 0 6px 0px;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 10px;
+    }
+  }
+
+  .sectionWrapper {
+    padding: 0 16px;
+  }
+
+  .aboutDescription {
+    font-size: 0.875rem;
+    margin-top: 15px;
+    line-height: 1.571;
+  }
+
+  .right {
+    margin-top: 25px;
+  }
+}
