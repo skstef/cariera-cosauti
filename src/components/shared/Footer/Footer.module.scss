@@ -144,3 +144,18 @@
     }
   }
 }
+
+@media (max-width: 500px) {
+  .footer {
+    padding: 24px 16px;
+  }
+
+  .logo {
+    height: 30px;
+    width: auto;
+  }
+
+  .copyRight {
+    bottom: 25px;
+  }
+}
