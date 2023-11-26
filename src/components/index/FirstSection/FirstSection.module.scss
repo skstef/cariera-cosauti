@@ -133,6 +133,10 @@
   .textBox {
     padding: 5px 0 5px 11px;
 
+    &::before {
+      width: 2px;
+    }
+
     h2 {
       font-size: 1.375rem;
       margin-top: 0;

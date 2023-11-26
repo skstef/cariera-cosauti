@@ -8,6 +8,7 @@ import { useTranslation } from "next-i18next";
 export const AboutUs = () => {
   const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const isMobile = useMediaQuery("(max-width:500px)");
 
   const viewMoreDetails = () => {
     Router.push("/about-us");
@@ -41,6 +42,13 @@ export const AboutUs = () => {
             alt="Despre noi"
             width={966}
             height={518}
+          />
+        ) : isMobile ? (
+          <Image
+            src="/images/aboutMobile.webp"
+            alt="Despre noi"
+            width={328}
+            height={197}
           />
         ) : (
           <Image

@@ -119,3 +119,46 @@
     margin-top: 50px;
   }
 }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 24px 14px 50px 14px;
+  }
+
+  .left {
+    margin-right: 0;
+    p {
+      font-size: 0.875rem;
+      margin-top: 18px;
+      line-height: 1.571;
+    }
+  }
+
+  .aboutUsHeader {
+    padding: 10px 0 6px 0;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 12px;
+    }
+  }
+
+  .btn {
+    margin-top: 18px;
+    font-size: 1.125rem;
+    margin-left: 3px;
+    padding: 11px 18px;
+  }
+
+  .image {
+    margin-top: 29px;
+
+    img {
+      height: auto;
+    }
+  }
+}
