@@ -140,3 +140,27 @@
     line-height: 1.71;
   }
 }
+
+@media (max-width: 420px) {
+  .flipCard {
+    width: 156px;
+    height: 166px;
+  }
+
+  .firstRow,
+  .secondRow {
+    padding: 0 15px;
+  }
+
+  .flipCardFront {
+    img {
+      width: 156px;
+      height: 146px;
+    }
+  }
+
+  .productName {
+    margin-top: 10px;
+    white-space: nowrap;
+  }
+}
