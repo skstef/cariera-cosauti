@@ -26,7 +26,7 @@ const IndexPage = () => {
       <Header />
       <main>
         <FirstSection />
-        <AboutUs />
+        {/* <AboutUs />
         <Production />
         <Galery />
         <Politics />
@@ -34,7 +34,7 @@ const IndexPage = () => {
         <Certificates />
         <HumanResources />
         <Parteners />
-        <ContactUs />
+        <ContactUs /> */}
       </main>
       <Footer />
     </>

@@ -7,6 +7,7 @@ import { useTranslation } from "next-i18next";
 
 export const FirstSection = () => {
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const isMobile = useMediaQuery("(max-width:500px)");
   const { t } = useTranslation("index");
 
   const viewProduction = () => {
@@ -23,6 +24,15 @@ export const FirstSection = () => {
           alt={"Cariera Cosăuți"}
           width={1920}
           height={1085}
+        />
+      ) : isMobile ? (
+        <Image
+          loading="eager"
+          className={styles.sectionImage}
+          src={"/images/mainMobile.webp"}
+          alt={"Cariera Cosăuți"}
+          width={360}
+          height={590}
         />
       ) : (
         <Image
