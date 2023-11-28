@@ -28,15 +28,15 @@ const IndexPage = () => {
         <FirstSection />
         <AboutUs />
         <Production />
-
-        {/* 
         <Galery />
+
+        {/* Mobile adaptive not done */}
         <Politics />
         <ResourcesAvailability />
         <Certificates />
         <HumanResources />
         <Parteners />
-        <ContactUs /> */}
+        <ContactUs />
       </main>
       <Footer />
     </>
