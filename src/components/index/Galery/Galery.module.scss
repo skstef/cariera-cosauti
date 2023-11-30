@@ -270,3 +270,76 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .section {
+    padding: 0 14px;
+  }
+
+  .imagesCarouselWrapper {
+    margin: 0 -14px;
+  }
+
+  .sectionHeader {
+    padding-top: 7px;
+    margin-top: 10px;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      margin-left: 15px;
+    }
+  }
+
+  .imagesCarousel {
+    padding-top: 60px;
+  }
+
+  .image {
+    height: 270px;
+    width: 158px;
+  }
+
+  .imageWrapper {
+    p {
+      font-size: 0.625rem;
+      bottom: 12px;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &:hover {
+      p {
+        bottom: -4px;
+      }
+
+      img {
+        height: 310px;
+        width: 180px;
+        margin: -20px -11px;
+      }
+
+      &::before {
+        margin: -21px -11px -18px -11px;
+      }
+    }
+  }
+
+  .leftArrowBtn,
+  .rightArrowBtn {
+    img {
+      height: 30px;
+      width: auto;
+    }
+  }
+}
