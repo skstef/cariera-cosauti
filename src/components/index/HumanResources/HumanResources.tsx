@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "./HumanResources.module.scss";
 import Image from "next/image";
 import { Button, TextField, styled, useMediaQuery } from "@mui/material";
@@ -57,6 +57,14 @@ export const HumanResources = () => {
     setCvFile(newValue);
   };
 
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const formProps = Object.fromEntries(formData);
+
+    console.log(formProps);
+  };
+
   return (
     <section id="human_resources" className={styles.section}>
       <div className={styles.contentContainer}>
@@ -65,10 +73,11 @@ export const HumanResources = () => {
           <p>{t("humanResources_subTitle")}</p>
         </div>
 
-        <form className={styles.contactForm}>
+        <form onSubmit={handleSubmit} className={styles.contactForm}>
           <StyledTextField
             className={styles.contactFormInput}
             id="nameSurname"
+            name="nameSurname"
             label={t("humanResources_nameSurname")}
             autoComplete="nameSurname"
             InputProps={{
@@ -79,6 +88,7 @@ export const HumanResources = () => {
           <StyledTextField
             className={styles.contactFormInput}
             id="phone"
+            name="phone"
             label={t("humanResources_phone")}
             autoComplete="phone"
             InputProps={{
@@ -89,6 +99,7 @@ export const HumanResources = () => {
           <StyledTextField
             className={styles.contactFormInput}
             id="email"
+            name="email"
             label={t("humanResources_email")}
             autoComplete="email"
             InputProps={{
@@ -99,6 +110,7 @@ export const HumanResources = () => {
           <StyledTextField
             className={styles.contactFormInput}
             id="job"
+            name="job"
             label={t("humanResources_position")}
             autoComplete="job"
             InputProps={{
@@ -110,6 +122,7 @@ export const HumanResources = () => {
             className={styles.contactFormTextField}
             fullWidth
             id="message"
+            name="message"
             label={t("humanResources_message")}
             autoComplete="message"
             multiline
@@ -119,6 +132,7 @@ export const HumanResources = () => {
 
           <StyledFileInput
             className={styles.contactFormFileInput}
+            name="cv"
             placeholder={t("humanResources_upload")}
             value={cvFile}
             //@ts-ignore

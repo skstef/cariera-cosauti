@@ -236,6 +236,7 @@
   .contactForm {
     margin-top: 20px;
     row-gap: 8px;
+    max-width: 400;
   }
 
   .sectionHeader {
@@ -262,6 +263,10 @@
     :global(.MuiInputBase-root) {
       height: 70px;
     }
+
+    :global(.MuiFormLabel-root[data-shrink="false"]) {
+      top: -5px;
+    }
   }
 
   .contactFormFileInput {
@@ -277,7 +282,7 @@
 
   .contactFormInput {
     :global(.MuiFormLabel-root[data-shrink="false"]) {
-      top: -6px;
+      top: -5px;
     }
   }
 

@@ -162,6 +162,12 @@
       font-size: 0.75rem;
     }
   }
+
+  .contactFormTextField {
+    :global(.MuiFormLabel-root[data-shrink="false"]) {
+      font-size: 0.75rem;
+    }
+  }
 }
 
 @media (max-width: 1100px) {
@@ -202,5 +208,94 @@
   .mapIframe {
     width: 403px;
     height: 423px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sectionContents {
+    padding: 0 14px;
+  }
+
+  .sectionHeader {
+    margin: 20px 0 17px 0;
+    padding-top: 1px;
+    padding-bottom: 3px;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+  }
+
+  .contactFormRow {
+    flex-direction: column;
+  }
+
+  .contactForm {
+    max-width: 400px;
+  }
+
+  .contactFormInput {
+    width: 100%;
+  }
+
+  .mapIframe {
+    width: 328px;
+    height: 328px;
+  }
+
+  .address {
+    margin-bottom: 20px;
+    margin-top: 27px;
+  }
+
+  .addressBox {
+    margin-left: 10px;
+  }
+
+  .addressHeader {
+    font-size: 1.25rem;
+  }
+
+  .addressData {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .contactFormRow {
+    margin-bottom: 24px;
+    gap: 24px;
+  }
+
+  .contactFormCheckboxWrapper {
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-left: 9px;
+  }
+
+  .contactFormCheckboxLabel {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .contactFormSubmitBtn {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+    padding: 8px 38px;
+  }
+}
+
+@media (max-width: 530px) {
+  .address {
+    flex-direction: column;
+  }
+
+  .mapIframe {
+    margin: 0 auto;
   }
 }

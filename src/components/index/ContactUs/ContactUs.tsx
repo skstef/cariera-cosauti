@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import styles from "./ContactUs.module.scss";
 import {
   Button,
@@ -6,6 +6,7 @@ import {
   FormControlLabel,
   TextField,
   styled,
+  useMediaQuery,
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
@@ -36,16 +37,37 @@ const StyledTextField = styled(TextField)`
 
 export const ContactUs = () => {
   const { t } = useTranslation("index");
+  const isMobile = useMediaQuery("(max-width:600px)");
+
+  const [conditionsAccepted, setConditionsAccepted] = useState(false);
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.target as HTMLFormElement);
+    const formProps = Object.fromEntries(formData);
+
+    console.log(formProps);
+  };
 
   return (
     <section id="contact_us" className={styles.section}>
-      <Image
-        className={styles.sectionImage}
-        src="/images/contact_bg.webp"
-        width={1920}
-        height={914}
-        alt={t("contactUs_title")}
-      />
+      {isMobile ? (
+        <Image
+          className={styles.sectionImage}
+          src="/images/contact_bg_mobile.webp"
+          width={500}
+          height={1249}
+          alt={t("contactUs_title")}
+        />
+      ) : (
+        <Image
+          className={styles.sectionImage}
+          src="/images/contact_bg.webp"
+          width={1920}
+          height={914}
+          alt={t("contactUs_title")}
+        />
+      )}
 
       <div className={styles.sectionContents}>
         <div className={styles.sectionHeader}>
@@ -53,29 +75,35 @@ export const ContactUs = () => {
         </div>
 
         <div className={styles.contents}>
-          <form className={styles.contactForm}>
+          <form onSubmit={handleSubmit} className={styles.contactForm}>
             <div className={styles.contactFormRow}>
               <StyledTextField
                 className={styles.contactFormInput}
                 id="surname"
+                name={"surname"}
                 label={t("contactUs_surname")}
                 autoComplete="surname"
-                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                InputProps={{
+                  sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+                }}
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
-                    top: "5px",
+                    top: isMobile ? "-5px" : "5px",
                   },
                 }}
               />
               <StyledTextField
                 className={styles.contactFormInput}
                 id="name"
+                name="name"
                 label={t("contactUs_name")}
                 autoComplete="name"
-                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                InputProps={{
+                  sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+                }}
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
-                    top: "5px",
+                    top: isMobile ? "-5px" : "5px",
                   },
                 }}
               />
@@ -84,24 +112,30 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormInput}
                 id="phone"
+                name="phone"
                 label={t("contactUs_phone")}
                 autoComplete="phone"
-                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                InputProps={{
+                  sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+                }}
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
-                    top: "5px",
+                    top: isMobile ? "-5px" : "5px",
                   },
                 }}
               />
               <StyledTextField
                 className={styles.contactFormInput}
                 id="email"
+                name="email"
                 label={t("contactUs_email")}
                 autoComplete="email"
-                InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+                InputProps={{
+                  sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+                }}
                 sx={{
                   ".MuiFormLabel-root[data-shrink=false]": {
-                    top: "5px",
+                    top: isMobile ? "-5px" : "5px",
                   },
                 }}
               />
@@ -111,22 +145,32 @@ export const ContactUs = () => {
               className={styles.contactFormTextField}
               fullWidth
               id="message"
+              name="message"
               label={t("contactUs_message")}
               autoComplete="message"
               multiline
-              rows={6}
+              rows={isMobile ? 4 : 6}
+              InputProps={{
+                sx: { borderRadius: 0, height: isMobile ? "150px" : "170px" },
+              }}
               sx={{
                 width: "100%",
                 ".MuiFormLabel-root[data-shrink=false]": {
-                  top: "5px",
+                  top: isMobile ? "-5px" : "5px",
                 },
               }}
-              InputProps={{ sx: { borderRadius: 0 } }}
             />
 
             <FormControlLabel
               className={styles.contactFormCheckboxWrapper}
-              control={<Checkbox defaultChecked />}
+              control={
+                <Checkbox
+                  onChange={(e) => {
+                    setConditionsAccepted(e.target.checked);
+                  }}
+                  value={conditionsAccepted}
+                />
+              }
               label={
                 <p className={styles.contactFormCheckboxLabel}>
                   {t("contactUs_agree")}
@@ -138,6 +182,7 @@ export const ContactUs = () => {
             />
 
             <Button
+              disabled={!conditionsAccepted}
               className={styles.contactFormSubmitBtn}
               variant="contained"
               type="submit"

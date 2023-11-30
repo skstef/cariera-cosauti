@@ -34,9 +34,7 @@ const IndexPage = () => {
         <Certificates />
         <HumanResources />
         <Parteners />
-
-        {/* Mobile adaptive not done */}
-        {/* <ContactUs /> */}
+        <ContactUs />
       </main>
       <Footer />
     </>
