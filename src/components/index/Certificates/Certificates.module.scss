@@ -13,6 +13,7 @@
   object-fit: cover;
   width: 100vw;
   max-width: 100%;
+  height: 100%;
   position: absolute;
 }
 
@@ -140,5 +141,43 @@
       font-size: 2rem;
       margin-left: 15px;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    min-height: 470px;
+  }
+
+  .sectionHeader {
+    padding-top: 9px;
+    margin-left: 17px;
+    margin-top: 11px;
+    margin-bottom: 30px;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+  }
+
+  .certificateContainer {
+    width: 160px;
+    height: 212px;
+  }
+
+  .certificatesContainer {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  .certificateContainer {
+    width: 138px;
+    height: 184px;
   }
 }

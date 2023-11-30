@@ -7,6 +7,7 @@ import { useTranslation } from "next-i18next";
 export const Certificates = () => {
   const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const isMobile = useMediaQuery("(max-width:500px)");
 
   return (
     <section className={styles.section}>
@@ -31,6 +32,14 @@ export const Certificates = () => {
           className={styles.sectionImage}
           width={1920}
           height={816}
+          alt="certificates"
+        />
+      ) : isMobile ? (
+        <Image
+          src="/images/certificatesMobile.webp"
+          className={styles.sectionImage}
+          width={768}
+          height={853}
           alt="certificates"
         />
       ) : (
