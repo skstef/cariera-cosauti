@@ -8,6 +8,7 @@ export const Politics = () => {
   const { t } = useTranslation("index");
 
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const isMobile = useMediaQuery("(max-width:500px)");
 
   const politicsList = [
     {
@@ -54,6 +55,14 @@ export const Politics = () => {
           src="/images/politics.webp"
           width={1920}
           height={732}
+          alt="Politicile de bază"
+        />
+      ) : isMobile ? (
+        <Image
+          className={styles.sectionImage}
+          src="/images/politicsMobile.webp"
+          width={360}
+          height={445}
           alt="Politicile de bază"
         />
       ) : (
