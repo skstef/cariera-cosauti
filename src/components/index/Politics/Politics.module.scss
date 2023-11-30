@@ -110,7 +110,7 @@
 .cardTitle {
   margin-top: 20px;
   color: #fff;
-  font-family: "Exo 2";
+  font-family: "Lato";
   font-size: 1.62rem;
   line-height: 1;
   font-weight: 400;
@@ -173,5 +173,73 @@
       font-size: 1.625rem;
       max-width: 570px;
     }
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    min-height: 445px;
+  }
+
+  .sectionWrapper {
+    padding: 0 14px;
+  }
+
+  .sectionHeader {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-top: 7px;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      margin-left: 15px;
+    }
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+    padding-top: 31px;
+    padding-left: 13px;
+    padding-right: 0;
+  }
+
+  .cardNumber {
+    font-size: 1.625rem;
+    padding-bottom: 17px;
+
+    &::after {
+      height: 2px;
+    }
+  }
+
+  .cardTitle {
+    font-size: 0.875rem;
+  }
+
+  .cardsWrapper {
+    margin-top: 23px;
+    row-gap: 35px;
+    column-gap: 22px;
   }
 }
