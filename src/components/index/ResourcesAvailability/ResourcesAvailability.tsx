@@ -6,6 +6,8 @@ import { useTranslation } from "next-i18next";
 
 export const ResourcesAvailability = () => {
   const { t } = useTranslation("index");
+
+  const isMobile = useMediaQuery("(max-width:500px)");
   const isDesktop = useMediaQuery("(min-width:1100px)");
 
   return (
@@ -17,6 +19,13 @@ export const ResourcesAvailability = () => {
             alt="Despre noi"
             width={997}
             height={553}
+          />
+        ) : isMobile ? (
+          <Image
+            src="/images/resourcesAvailabilityMobile.webp"
+            alt="Despre noi"
+            width={328}
+            height={184}
           />
         ) : (
           <Image

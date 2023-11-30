@@ -30,10 +30,11 @@ const IndexPage = () => {
         <Production />
         <Galery />
         <Politics />
+        <ResourcesAvailability />
 
         {/* Mobile adaptive not done */}
         {/* 
-        <ResourcesAvailability />
+        
         <Certificates />
         <HumanResources />
         <Parteners />
