@@ -103,3 +103,38 @@
     }
   }
 }
+
+@media (max-width: 600px) {
+  .sectionHeader {
+    padding-top: 3px;
+    padding-bottom: 7px;
+    margin-top: 5px;
+    margin-left: 14px;
+    margin-bottom: 35px;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      margin-left: 15px;
+    }
+  }
+
+  .imageContainer {
+    width: 70px;
+    height: 54px;
+  }
+
+  .partenersGrid {
+    margin: 0;
+    row-gap: 47px;
+    column-gap: 5px;
+  }
+}
