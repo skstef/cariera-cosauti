@@ -49,6 +49,7 @@ const StyledFileInput = styled(MuiFileInput)`
 export const HumanResources = () => {
   const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
+  const isMobile = useMediaQuery("(max-width:600px)");
 
   const [cvFile, setCvFile] = useState<File | null>(null);
 
@@ -70,7 +71,9 @@ export const HumanResources = () => {
             id="nameSurname"
             label={t("humanResources_nameSurname")}
             autoComplete="nameSurname"
-            InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+            InputProps={{
+              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+            }}
           />
 
           <StyledTextField
@@ -78,7 +81,9 @@ export const HumanResources = () => {
             id="phone"
             label={t("humanResources_phone")}
             autoComplete="phone"
-            InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+            InputProps={{
+              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+            }}
           />
 
           <StyledTextField
@@ -86,7 +91,9 @@ export const HumanResources = () => {
             id="email"
             label={t("humanResources_email")}
             autoComplete="email"
-            InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+            InputProps={{
+              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+            }}
           />
 
           <StyledTextField
@@ -94,7 +101,9 @@ export const HumanResources = () => {
             id="job"
             label={t("humanResources_position")}
             autoComplete="job"
-            InputProps={{ sx: { borderRadius: 0, height: "70px" } }}
+            InputProps={{
+              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+            }}
           />
 
           <StyledTextField
@@ -104,7 +113,7 @@ export const HumanResources = () => {
             label={t("humanResources_message")}
             autoComplete="message"
             multiline
-            rows={6}
+            rows={isMobile ? 2 : 6}
             InputProps={{ sx: { borderRadius: 0 } }}
           />
 

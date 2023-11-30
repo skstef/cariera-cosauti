@@ -170,6 +170,11 @@
       height: 180px;
     }
 
+    input {
+      height: 140px;
+      width: 100%;
+    }
+
     :global(span.MuiFileInput-placeholder) {
       font-size: 0.75rem;
     }
@@ -194,5 +199,93 @@
 
   .sectionImage {
     height: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .contactForm {
+    flex-direction: column;
+  }
+
+  .contactFormInput {
+    min-width: 150px;
+    max-width: none;
+    width: 100%;
+    flex: 1;
+  }
+
+  .contactFormTextField {
+    width: 100%;
+  }
+
+  .contactFormFileInput {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section {
+    margin-top: 40px;
+  }
+
+  .contentContainer {
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+
+  .contactForm {
+    margin-top: 20px;
+    row-gap: 8px;
+  }
+
+  .sectionHeader {
+    padding-bottom: 7px;
+    padding-top: 7px;
+    margin-top: 0;
+
+    &::before {
+      width: 2px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-left: 15px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      margin-left: 15px;
+    }
+  }
+
+  .contactFormTextField {
+    :global(.MuiInputBase-root) {
+      height: 70px;
+    }
+  }
+
+  .contactFormFileInput {
+    :global(.MuiInputBase-root) {
+      height: 70px;
+    }
+
+    input {
+      height: 35px;
+      width: 100%;
+    }
+  }
+
+  .contactFormInput {
+    :global(.MuiFormLabel-root[data-shrink="false"]) {
+      top: -6px;
+    }
+  }
+
+  .contactFormSubmitBtnWrapper {
+    margin-top: 20px;
+  }
+
+  .contactFormSubmitBtn {
+    padding: 11px 46px;
   }
 }
