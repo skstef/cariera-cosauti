@@ -49,7 +49,7 @@ const StyledFileInput = styled(MuiFileInput)`
 export const HumanResources = () => {
   const { t } = useTranslation("index");
   const isDesktop = useMediaQuery("(min-width:1100px)");
-  const isMobile = useMediaQuery("(max-width:600px)");
+  const isMobile = useMediaQuery("(max-width:500px)");
 
   const [cvFile, setCvFile] = useState<File | null>(null);
 
@@ -126,7 +126,7 @@ export const HumanResources = () => {
             label={t("humanResources_message")}
             autoComplete="message"
             multiline
-            rows={isMobile ? 2 : 6}
+            rows={4}
             InputProps={{ sx: { borderRadius: 0 } }}
           />
 

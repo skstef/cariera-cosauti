@@ -149,7 +149,7 @@ export const ContactUs = () => {
               label={t("contactUs_message")}
               autoComplete="message"
               multiline
-              rows={isMobile ? 4 : 6}
+              rows={5}
               InputProps={{
                 sx: { borderRadius: 0, height: isMobile ? "150px" : "170px" },
               }}
