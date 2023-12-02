@@ -79,7 +79,7 @@ export const ContactUs = () => {
             <div className={styles.contactFormRow}>
               <StyledTextField
                 className={styles.contactFormInput}
-                id="surname"
+                id="contact_surname"
                 name={"surname"}
                 label={t("contactUs_surname")}
                 autoComplete="surname"
@@ -94,7 +94,7 @@ export const ContactUs = () => {
               />
               <StyledTextField
                 className={styles.contactFormInput}
-                id="name"
+                id="contact_name"
                 name="name"
                 label={t("contactUs_name")}
                 autoComplete="name"
@@ -111,7 +111,7 @@ export const ContactUs = () => {
             <div className={styles.contactFormRow}>
               <StyledTextField
                 className={styles.contactFormInput}
-                id="phone"
+                id="contact_phone"
                 name="phone"
                 label={t("contactUs_phone")}
                 autoComplete="phone"
@@ -126,7 +126,7 @@ export const ContactUs = () => {
               />
               <StyledTextField
                 className={styles.contactFormInput}
-                id="email"
+                id="contact_email"
                 name="email"
                 label={t("contactUs_email")}
                 autoComplete="email"
@@ -145,7 +145,7 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormTextField}
                 fullWidth
-                id="message"
+                id="contact_message"
                 name="message"
                 label={t("contactUs_message")}
                 autoComplete="message"
@@ -166,7 +166,7 @@ export const ContactUs = () => {
               <StyledTextField
                 className={styles.contactFormTextField}
                 fullWidth
-                id="message"
+                id="contact_message"
                 name="message"
                 label={t("contactUs_message")}
                 autoComplete="message"

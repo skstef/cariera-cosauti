@@ -76,7 +76,7 @@ export const HumanResources = () => {
         <form onSubmit={handleSubmit} className={styles.contactForm}>
           <StyledTextField
             className={styles.contactFormInput}
-            id="nameSurname"
+            id="hr_nameSurname"
             name="nameSurname"
             label={t("humanResources_nameSurname")}
             autoComplete="nameSurname"
@@ -87,7 +87,7 @@ export const HumanResources = () => {
 
           <StyledTextField
             className={styles.contactFormInput}
-            id="phone"
+            id="hr_phone"
             name="phone"
             label={t("humanResources_phone")}
             autoComplete="phone"
@@ -98,7 +98,7 @@ export const HumanResources = () => {
 
           <StyledTextField
             className={styles.contactFormInput}
-            id="email"
+            id="hr_email"
             name="email"
             label={t("humanResources_email")}
             autoComplete="email"
@@ -109,7 +109,7 @@ export const HumanResources = () => {
 
           <StyledTextField
             className={styles.contactFormInput}
-            id="job"
+            id="hr_job"
             name="job"
             label={t("humanResources_position")}
             autoComplete="job"
@@ -122,7 +122,7 @@ export const HumanResources = () => {
             <StyledTextField
               className={styles.contactFormTextFieldMobile}
               fullWidth
-              id="message"
+              id="hr_message"
               name="message"
               label={t("humanResources_message")}
               autoComplete="message"
@@ -136,7 +136,7 @@ export const HumanResources = () => {
             <StyledTextField
               className={styles.contactFormTextField}
               fullWidth
-              id="message"
+              id="hr_message"
               name="message"
               label={t("humanResources_message")}
               autoComplete="message"
@@ -148,6 +148,7 @@ export const HumanResources = () => {
 
           <StyledFileInput
             className={styles.contactFormFileInput}
+            id="hr_cv"
             name="cv"
             placeholder={t("humanResources_upload")}
             value={cvFile}
