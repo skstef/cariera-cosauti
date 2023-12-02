@@ -36,7 +36,7 @@ const StyledFileInput = styled(MuiFileInput)`
     }
   }
   & .MuiFileInput-placeholder {
-    color: #fffff !important;
+    color: #c0c0c0 !important;
   }
 
   fieldset {
@@ -118,17 +118,33 @@ export const HumanResources = () => {
             }}
           />
 
-          <StyledTextField
-            className={styles.contactFormTextField}
-            fullWidth
-            id="message"
-            name="message"
-            label={t("humanResources_message")}
-            autoComplete="message"
-            multiline
-            rows={4}
-            InputProps={{ sx: { borderRadius: 0 } }}
-          />
+          {isMobile && (
+            <StyledTextField
+              className={styles.contactFormTextFieldMobile}
+              fullWidth
+              id="message"
+              name="message"
+              label={t("humanResources_message")}
+              autoComplete="message"
+              multiline
+              rows={4}
+              InputProps={{ sx: { borderRadius: 0 } }}
+            />
+          )}
+
+          {!isMobile && (
+            <StyledTextField
+              className={styles.contactFormTextField}
+              fullWidth
+              id="message"
+              name="message"
+              label={t("humanResources_message")}
+              autoComplete="message"
+              multiline
+              rows={4}
+              InputProps={{ sx: { borderRadius: 0 } }}
+            />
+          )}
 
           <StyledFileInput
             className={styles.contactFormFileInput}

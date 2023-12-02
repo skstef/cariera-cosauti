@@ -141,25 +141,48 @@ export const ContactUs = () => {
               />
             </div>
 
-            <StyledTextField
-              className={styles.contactFormTextField}
-              fullWidth
-              id="message"
-              name="message"
-              label={t("contactUs_message")}
-              autoComplete="message"
-              multiline
-              rows={5}
-              InputProps={{
-                sx: { borderRadius: 0, height: isMobile ? "150px" : "170px" },
-              }}
-              sx={{
-                width: "100%",
-                ".MuiFormLabel-root[data-shrink=false]": {
-                  top: isMobile ? "-5px" : "5px",
-                },
-              }}
-            />
+            {isMobile && (
+              <StyledTextField
+                className={styles.contactFormTextField}
+                fullWidth
+                id="message"
+                name="message"
+                label={t("contactUs_message")}
+                autoComplete="message"
+                multiline
+                rows={5}
+                InputProps={{
+                  sx: { borderRadius: 0, height: isMobile ? "150px" : "170px" },
+                }}
+                sx={{
+                  width: "100%",
+                  ".MuiFormLabel-root[data-shrink=false]": {
+                    top: isMobile ? "-5px" : "5px",
+                  },
+                }}
+              />
+            )}
+            {!isMobile && (
+              <StyledTextField
+                className={styles.contactFormTextField}
+                fullWidth
+                id="message"
+                name="message"
+                label={t("contactUs_message")}
+                autoComplete="message"
+                multiline
+                rows={6}
+                InputProps={{
+                  sx: { borderRadius: 0, height: isMobile ? "150px" : "170px" },
+                }}
+                sx={{
+                  width: "100%",
+                  ".MuiFormLabel-root[data-shrink=false]": {
+                    top: isMobile ? "-5px" : "5px",
+                  },
+                }}
+              />
+            )}
 
             <FormControlLabel
               className={styles.contactFormCheckboxWrapper}

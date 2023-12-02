@@ -97,6 +97,26 @@
   }
 }
 
+.contactFormTextFieldMobile {
+  width: 100%;
+
+  :global(.MuiInputBase-root) {
+    height: 70px;
+  }
+
+  :global(.MuiInputBase-input) {
+    height: 50px !important;
+  }
+
+  :global(.MuiFormLabel-root[data-shrink="false"]) {
+    font-size: 0.75rem;
+  }
+
+  :global(.MuiFormLabel-root[data-shrink="false"]) {
+    top: -5px;
+  }
+}
+
 @media (max-width: 1600px) {
   .contentContainer {
     margin-left: 50px;
