@@ -1,40 +1,35 @@
 import React from "react";
 import styles from "./ResourcesAvailability.module.scss";
 import Image from "next/image";
-import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "next-i18next";
 
 export const ResourcesAvailability = () => {
   const { t } = useTranslation("index");
 
-  const isMobile = useMediaQuery("(max-width:500px)");
-  const isDesktop = useMediaQuery("(min-width:1100px)");
-
   return (
     <section className={styles.section}>
       <div className={styles.image}>
-        {isDesktop ? (
-          <Image
-            src="/images/resourcesAvailability.webp"
-            alt="Despre noi"
-            width={997}
-            height={553}
-          />
-        ) : isMobile ? (
-          <Image
-            src="/images/resourcesAvailabilityMobile.webp"
-            alt="Despre noi"
-            width={328}
-            height={184}
-          />
-        ) : (
-          <Image
-            src="/images/resourcesAvailabilityTablet.webp"
-            alt="Despre noi"
-            width={720}
-            height={399}
-          />
-        )}
+        <Image
+          src="/images/resourcesAvailability.webp"
+          alt="Despre noi"
+          width={997}
+          height={553}
+          className="visibleOn1100AndMore"
+        />
+        <Image
+          src="/images/resourcesAvailabilityTablet.webp"
+          alt="Despre noi"
+          width={720}
+          height={399}
+          className="visibleBetween500And1100"
+        />
+        <Image
+          src="/images/resourcesAvailabilityMobile.webp"
+          alt="Despre noi"
+          width={328}
+          height={184}
+          className="visibleOn500AndLess"
+        />
       </div>
 
       <div className={styles.right}>

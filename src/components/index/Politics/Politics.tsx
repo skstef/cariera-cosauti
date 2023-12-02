@@ -1,14 +1,11 @@
 import React from "react";
 import styles from "./Politics.module.scss";
 import Image from "next/image";
-import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "next-i18next";
+import cx from "classnames";
 
 export const Politics = () => {
   const { t } = useTranslation("index");
-
-  const isDesktop = useMediaQuery("(min-width:1100px)");
-  const isMobile = useMediaQuery("(max-width:500px)");
 
   const politicsList = [
     {
@@ -49,31 +46,29 @@ export const Politics = () => {
         </div>
       </div>
 
-      {isDesktop ? (
-        <Image
-          className={styles.sectionImage}
-          src="/images/politics.webp"
-          width={1920}
-          height={732}
-          alt="Politicile de bază"
-        />
-      ) : isMobile ? (
-        <Image
-          className={styles.sectionImage}
-          src="/images/politicsMobile.webp"
-          width={360}
-          height={445}
-          alt="Politicile de bază"
-        />
-      ) : (
-        <Image
-          className={styles.sectionImage}
-          src="/images/politicsTablet.webp"
-          width={1920}
-          height={732}
-          alt="Politicile de bază"
-        />
-      )}
+      <Image
+        className={cx(styles.sectionImage, "visibleOn1100AndMore")}
+        src="/images/politics.webp"
+        width={1920}
+        height={732}
+        alt="Politicile de bază"
+      />
+
+      <Image
+        className={cx(styles.sectionImage, "visibleBetween500And1100")}
+        src="/images/politicsTablet.webp"
+        width={1920}
+        height={732}
+        alt="Politicile de bază"
+      />
+
+      <Image
+        className={cx(styles.sectionImage, "visibleOn500AndLess")}
+        src="/images/politicsMobile.webp"
+        width={360}
+        height={445}
+        alt="Politicile de bază"
+      />
     </section>
   );
 };

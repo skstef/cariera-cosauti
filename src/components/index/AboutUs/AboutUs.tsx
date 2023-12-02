@@ -1,14 +1,12 @@
 import React from "react";
 import styles from "./AboutUs.module.scss";
-import { Button, useMediaQuery } from "@mui/material";
+import { Button } from "@mui/material";
 import Image from "next/image";
 import Router from "next/router";
 import { useTranslation } from "next-i18next";
 
 export const AboutUs = () => {
   const { t } = useTranslation("index");
-  const isDesktop = useMediaQuery("(min-width:1100px)");
-  const isMobile = useMediaQuery("(max-width:500px)");
 
   const viewMoreDetails = () => {
     Router.push("/about-us");
@@ -36,28 +34,31 @@ export const AboutUs = () => {
         </Button>
       </div>
       <div className={styles.image}>
-        {isDesktop ? (
+        <>
           <Image
             src="/images/about.webp"
             alt="Despre noi"
             width={966}
             height={518}
+            className="visibleOn1100AndMore"
           />
-        ) : isMobile ? (
-          <Image
-            src="/images/aboutMobile.webp"
-            alt="Despre noi"
-            width={328}
-            height={197}
-          />
-        ) : (
+
           <Image
             src="/images/aboutTablet.webp"
             alt="Despre noi"
             width={720}
             height={390}
+            className="visibleBetween500And1100"
           />
-        )}
+
+          <Image
+            src="/images/aboutMobile.webp"
+            alt="Despre noi"
+            width={328}
+            height={197}
+            className="visibleOn500AndLess"
+          />
+        </>
       </div>
     </section>
   );

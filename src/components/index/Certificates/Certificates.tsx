@@ -1,13 +1,11 @@
 import React from "react";
 import styles from "./Certificates.module.scss";
 import Image from "next/image";
-import { useMediaQuery } from "@mui/material";
+import cx from "classnames";
 import { useTranslation } from "next-i18next";
 
 export const Certificates = () => {
   const { t } = useTranslation("index");
-  const isDesktop = useMediaQuery("(min-width:1100px)");
-  const isMobile = useMediaQuery("(max-width:500px)");
 
   return (
     <section className={styles.section}>
@@ -26,31 +24,31 @@ export const Certificates = () => {
         </div>
       </div>
 
-      {isDesktop ? (
+      <>
         <Image
           src="/images/certificates.webp"
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, "visibleOn1100AndMore")}
           width={1920}
           height={816}
           alt="certificates"
         />
-      ) : isMobile ? (
-        <Image
-          src="/images/certificatesMobile.webp"
-          className={styles.sectionImage}
-          width={768}
-          height={853}
-          alt="certificates"
-        />
-      ) : (
+
         <Image
           src="/images/certificatesTablet.webp"
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, "visibleBetween500And1100")}
           width={768}
           height={853}
           alt="certificates"
         />
-      )}
+
+        <Image
+          src="/images/certificatesMobile.webp"
+          className={cx(styles.sectionImage, "visibleOn500AndLess")}
+          width={768}
+          height={853}
+          alt="certificates"
+        />
+      </>
     </section>
   );
 };

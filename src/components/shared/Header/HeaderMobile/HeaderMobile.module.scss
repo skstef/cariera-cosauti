@@ -9,6 +9,10 @@
   left: 0;
   right: 0;
   z-index: 9999;
+
+  @media (min-width: 1100px) {
+    display: none;
+  }
 }
 
 .menuBtn {

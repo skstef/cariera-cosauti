@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button, TextField, styled, useMediaQuery } from "@mui/material";
 import { MuiFileInput } from "mui-file-input";
 import { useTranslation } from "next-i18next";
+import cx from "classnames";
 
 const StyledTextField = styled(TextField)`
   & label.Mui-focused {
@@ -48,7 +49,6 @@ const StyledFileInput = styled(MuiFileInput)`
 
 export const HumanResources = () => {
   const { t } = useTranslation("index");
-  const isDesktop = useMediaQuery("(min-width:1100px)");
   const isMobile = useMediaQuery("(max-width:500px)");
 
   const [cvFile, setCvFile] = useState<File | null>(null);
@@ -168,23 +168,21 @@ export const HumanResources = () => {
         </form>
       </div>
 
-      {isDesktop ? (
-        <Image
-          src="/images/hr_bg.webp"
-          className={styles.sectionImage}
-          width={1920}
-          height={1368}
-          alt="cadre"
-        />
-      ) : (
-        <Image
-          src="/images/hr_bg_tablet.webp"
-          className={styles.sectionImage}
-          width={768}
-          height={868}
-          alt="cadre"
-        />
-      )}
+      <Image
+        src="/images/hr_bg.webp"
+        className={cx(styles.sectionImage, "visibleOn1100AndMore")}
+        width={1920}
+        height={1368}
+        alt="cadre"
+      />
+
+      <Image
+        src="/images/hr_bg_tablet.webp"
+        className={cx(styles.sectionImage, "visibleOn1100Less")}
+        width={768}
+        height={868}
+        alt="cadre"
+      />
     </section>
   );
 };
