@@ -75,5 +75,8 @@
   "contactUs_termsAndConditions": "Terms and conditions",
   "contactUs_submit": "Send",
   "contactUs_addressTitle": "Address:",
-  "contactUs_addressBox": "4 Cosauti street, MD 3000, <br /> Soroca, Republic of Moldova <br /> <br /> Email: <br /> carieracosauti@mail.ru <br /> tel/fax: +373 230 20710 <br /> <br /> Commercial department: <br /> tel: +373 230 20722 <br /> <br /> Laboratory: <br /> tel: +373 230 20730 <br /> <br /> Accounting: <br /> tel: +373 230 20712"
+  "contactUs_addressBox": "4 Cosauti street, MD 3000, <br /> Soroca, Republic of Moldova <br /> <br /> Email: <br /> carieracosauti@mail.ru <br /> tel/fax: +373 230 20710 <br /> <br /> Commercial department: <br /> tel: +373 230 20722 <br /> <br /> Laboratory: <br /> tel: +373 230 20730 <br /> <br /> Accounting: <br /> tel: +373 230 20712",
+
+  "message_success": "Your message has been sent successfully!",
+  "message_error": "Error! Your message has not been sent."
 }

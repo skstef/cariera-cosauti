@@ -1,10 +1,19 @@
 import React, { FormEvent, useState } from "react";
 import styles from "./HumanResources.module.scss";
 import Image from "next/image";
-import { Button, TextField, styled, useMediaQuery } from "@mui/material";
+import {
+  Alert,
+  Button,
+  Snackbar,
+  TextField,
+  styled,
+  useMediaQuery,
+} from "@mui/material";
 import { MuiFileInput } from "mui-file-input";
 import { useTranslation } from "next-i18next";
 import cx from "classnames";
+import emailjs from "@emailjs/browser";
+import { LoadingButton } from "@mui/lab";
 
 const StyledTextField = styled(TextField)`
   & label.Mui-focused {
@@ -52,138 +61,202 @@ export const HumanResources = () => {
   const isMobile = useMediaQuery("(max-width:500px)");
 
   const [cvFile, setCvFile] = useState<File | null>(null);
+  const [successSnackbar, setSuccessSnackBar] = useState(false);
+  const [errorSnackbar, setErrorSnackBar] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleCvFileChange = (newValue: File | null) => {
     setCvFile(newValue);
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSuccessSnackbarClose = () => {
+    setSuccessSnackBar(false);
+  };
+
+  const handleErrorSnackbarClose = () => {
+    setErrorSnackBar(false);
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
     const formProps = Object.fromEntries(formData);
 
-    console.log(formProps);
+    delete formProps.cv;
+    setIsLoading(true);
+
+    try {
+      await emailjs.send(
+        "service_drhxdqr",
+        "template_g1dyaqm",
+        formProps,
+        "JypL3Vvdua5hdqlZ5"
+      );
+
+      setSuccessSnackBar(true);
+    } catch {
+      setErrorSnackBar(true);
+    }
+    setIsLoading(false);
   };
 
   return (
-    <section id="human_resources" className={styles.section}>
-      <div className={styles.contentContainer}>
-        <div className={styles.sectionHeader}>
-          <h3>{t("humanResources_title")}</h3>
-          <p>{t("humanResources_subTitle")}</p>
+    <>
+      <Snackbar
+        open={successSnackbar}
+        autoHideDuration={5000}
+        onClose={handleSuccessSnackbarClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+      >
+        <Alert
+          onClose={handleSuccessSnackbarClose}
+          severity="success"
+          sx={{ width: "100%" }}
+        >
+          {t("message_success")}
+        </Alert>
+      </Snackbar>
+
+      <Snackbar
+        open={errorSnackbar}
+        autoHideDuration={5000}
+        onClose={handleErrorSnackbarClose}
+        anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+      >
+        <Alert
+          onClose={handleErrorSnackbarClose}
+          severity="error"
+          sx={{ width: "100%" }}
+        >
+          {t("message_error")}
+        </Alert>
+      </Snackbar>
+
+      <section id="human_resources" className={styles.section}>
+        <div className={styles.contentContainer}>
+          <div className={styles.sectionHeader}>
+            <h3>{t("humanResources_title")}</h3>
+            <p>{t("humanResources_subTitle")}</p>
+          </div>
+
+          <form onSubmit={handleSubmit} className={styles.contactForm}>
+            <StyledTextField
+              required
+              className={styles.contactFormInput}
+              id="hr_nameSurname"
+              name="nameSurname"
+              label={t("humanResources_nameSurname")}
+              autoComplete="nameSurname"
+              InputProps={{
+                sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+              }}
+            />
+
+            <StyledTextField
+              required
+              className={styles.contactFormInput}
+              id="hr_phone"
+              name="phone"
+              label={t("humanResources_phone")}
+              autoComplete="phone"
+              InputProps={{
+                sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+              }}
+            />
+
+            <StyledTextField
+              required
+              type="email"
+              className={styles.contactFormInput}
+              id="hr_email"
+              name="email"
+              label={t("humanResources_email")}
+              autoComplete="email"
+              InputProps={{
+                sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+              }}
+            />
+
+            <StyledTextField
+              required
+              className={styles.contactFormInput}
+              id="hr_job"
+              name="job"
+              label={t("humanResources_position")}
+              autoComplete="job"
+              InputProps={{
+                sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
+              }}
+            />
+
+            {isMobile && (
+              <StyledTextField
+                className={styles.contactFormTextFieldMobile}
+                fullWidth
+                id="hr_message"
+                name="message"
+                label={t("humanResources_message")}
+                autoComplete="message"
+                multiline
+                rows={4}
+                InputProps={{ sx: { borderRadius: 0 } }}
+              />
+            )}
+
+            {!isMobile && (
+              <StyledTextField
+                className={styles.contactFormTextField}
+                fullWidth
+                id="hr_message"
+                name="message"
+                label={t("humanResources_message")}
+                autoComplete="message"
+                multiline
+                rows={4}
+                InputProps={{ sx: { borderRadius: 0 } }}
+              />
+            )}
+
+            <StyledFileInput
+              className={styles.contactFormFileInput}
+              id="hr_cv"
+              name="cv"
+              placeholder={t("humanResources_upload")}
+              value={cvFile}
+              //@ts-ignore
+              onChange={handleCvFileChange}
+              InputProps={{ sx: { borderRadius: 0 } }}
+            />
+
+            <div className={styles.contactFormSubmitBtnWrapper}>
+              <LoadingButton
+                loading={isLoading}
+                className={styles.contactFormSubmitBtn}
+                variant="contained"
+                type="submit"
+              >
+                {t("humanResources_submit")}
+              </LoadingButton>
+            </div>
+          </form>
         </div>
 
-        <form onSubmit={handleSubmit} className={styles.contactForm}>
-          <StyledTextField
-            className={styles.contactFormInput}
-            id="hr_nameSurname"
-            name="nameSurname"
-            label={t("humanResources_nameSurname")}
-            autoComplete="nameSurname"
-            InputProps={{
-              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
-            }}
-          />
+        <Image
+          src="/images/hr_bg.webp"
+          className={cx(styles.sectionImage, "visibleOn1100AndMore")}
+          width={1920}
+          height={1368}
+          alt="cadre"
+        />
 
-          <StyledTextField
-            className={styles.contactFormInput}
-            id="hr_phone"
-            name="phone"
-            label={t("humanResources_phone")}
-            autoComplete="phone"
-            InputProps={{
-              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
-            }}
-          />
-
-          <StyledTextField
-            className={styles.contactFormInput}
-            id="hr_email"
-            name="email"
-            label={t("humanResources_email")}
-            autoComplete="email"
-            InputProps={{
-              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
-            }}
-          />
-
-          <StyledTextField
-            className={styles.contactFormInput}
-            id="hr_job"
-            name="job"
-            label={t("humanResources_position")}
-            autoComplete="job"
-            InputProps={{
-              sx: { borderRadius: 0, height: isMobile ? "40px" : "70px" },
-            }}
-          />
-
-          {isMobile && (
-            <StyledTextField
-              className={styles.contactFormTextFieldMobile}
-              fullWidth
-              id="hr_message"
-              name="message"
-              label={t("humanResources_message")}
-              autoComplete="message"
-              multiline
-              rows={4}
-              InputProps={{ sx: { borderRadius: 0 } }}
-            />
-          )}
-
-          {!isMobile && (
-            <StyledTextField
-              className={styles.contactFormTextField}
-              fullWidth
-              id="hr_message"
-              name="message"
-              label={t("humanResources_message")}
-              autoComplete="message"
-              multiline
-              rows={4}
-              InputProps={{ sx: { borderRadius: 0 } }}
-            />
-          )}
-
-          <StyledFileInput
-            className={styles.contactFormFileInput}
-            id="hr_cv"
-            name="cv"
-            placeholder={t("humanResources_upload")}
-            value={cvFile}
-            //@ts-ignore
-            onChange={handleCvFileChange}
-            InputProps={{ sx: { borderRadius: 0, height: "160px" } }}
-          />
-
-          <div className={styles.contactFormSubmitBtnWrapper}>
-            <Button
-              className={styles.contactFormSubmitBtn}
-              variant="contained"
-              type="submit"
-            >
-              {t("humanResources_submit")}
-            </Button>
-          </div>
-        </form>
-      </div>
-
-      <Image
-        src="/images/hr_bg.webp"
-        className={cx(styles.sectionImage, "visibleOn1100AndMore")}
-        width={1920}
-        height={1368}
-        alt="cadre"
-      />
-
-      <Image
-        src="/images/hr_bg_tablet.webp"
-        className={cx(styles.sectionImage, "visibleOn1100Less")}
-        width={768}
-        height={868}
-        alt="cadre"
-      />
-    </section>
+        <Image
+          src="/images/hr_bg_tablet.webp"
+          className={cx(styles.sectionImage, "visibleOn1100Less")}
+          width={768}
+          height={868}
+          alt="cadre"
+        />
+      </section>
+    </>
   );
 };

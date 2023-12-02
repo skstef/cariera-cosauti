@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.11.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.14",
+    "@mui/lab": "^5.0.0-alpha.154",
     "@mui/material": "^5.14.13",
     "classnames": "^2.3.2",
     "i18next": "^23.7.3",
