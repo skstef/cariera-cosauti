@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import styles from "./Galery.module.scss";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
+import { useMediaQuery } from "@mui/material";
 
 const images = [
   "/images/gallery-1.webp",
@@ -20,7 +21,26 @@ const images = [
   "/images/gallery-14.webp",
 ];
 
+const imagesMobile = [
+  "/images/gallery-1-mobile.webp",
+  "/images/gallery-2-mobile.webp",
+  "/images/gallery-3-mobile.webp",
+  "/images/gallery-4-mobile.webp",
+  "/images/gallery-5-mobile.webp",
+  "/images/gallery-6-mobile.webp",
+  "/images/gallery-7-mobile.webp",
+  "/images/gallery-8-mobile.webp",
+  "/images/gallery-9-mobile.webp",
+  "/images/gallery-10-mobile.webp",
+  "/images/gallery-11-mobile.webp",
+  "/images/gallery-12-mobile.webp",
+  "/images/gallery-13-mobile.webp",
+  "/images/gallery-14-mobile.webp",
+];
+
 export const Galery = () => {
+  const isMobile = useMediaQuery("(max-width:600px)");
+
   const { t } = useTranslation("index");
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -36,7 +56,7 @@ export const Galery = () => {
     }
   };
 
-  const items = images.map((el, index) => (
+  const items = (isMobile ? imagesMobile : images).map((el, index) => (
     <div className={styles.imageWrapper} key={el}>
       <Image
         width={638}
