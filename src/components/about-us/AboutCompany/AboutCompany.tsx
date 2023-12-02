@@ -32,7 +32,10 @@ export const AboutCompany = () => {
               alt="quality"
             />
 
-            <h5 className={styles.cardTitle}>{t("aboutUs_cardTitle_1")}</h5>
+            <h5
+              className={styles.cardTitle}
+              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_1") }}
+            />
 
             <p className={styles.cardData}>{t("aboutUs_cardContent_1")}</p>
           </div>
@@ -46,7 +49,10 @@ export const AboutCompany = () => {
               alt="staff"
             />
 
-            <h5 className={styles.cardTitle}>{t("aboutUs_cardTitle_2")}</h5>
+            <h5
+              className={styles.cardTitle}
+              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_2") }}
+            />
 
             <p className={styles.cardData}>{t("aboutUs_cardContent_2")}</p>
           </div>
@@ -60,7 +66,10 @@ export const AboutCompany = () => {
               alt="capacity"
             />
 
-            <h5 className={styles.cardTitle}>{t("aboutUs_cardTitle_3")}</h5>
+            <h5
+              className={styles.cardTitle}
+              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_3") }}
+            />
 
             <p
               className={styles.cardData}
@@ -77,7 +86,10 @@ export const AboutCompany = () => {
               alt={"investments"}
             />
 
-            <h5 className={styles.cardTitle}>{t("aboutUs_cardTitle_4")}</h5>
+            <h5
+              className={styles.cardTitle}
+              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_4") }}
+            />
 
             <p className={styles.cardData}>{t("aboutUs_cardContent_4")}</p>
           </div>

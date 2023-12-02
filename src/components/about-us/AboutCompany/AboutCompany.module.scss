@@ -121,7 +121,6 @@
   font-weight: 600;
   font-size: 1.5rem;
   margin-top: 45px;
-  max-width: 150px;
   text-align: center;
   color: #fdc019;
   text-transform: uppercase;
@@ -185,6 +184,10 @@
     font-size: 1.25rem;
     font-weight: 500;
     margin-top: 25px;
+
+    span {
+      font-size: 0.8125rem;
+    }
   }
 
   .cardData {
@@ -198,7 +201,7 @@
     padding: 7px 8px 0 10px;
 
     .cardTitle {
-      margin-bottom: 8px;
+      margin-bottom: 3px;
       &::before {
         top: -8px;
         height: 1px;
@@ -209,6 +212,7 @@
       padding-top: 10px;
 
       .cardTitle {
+        margin-bottom: 5px;
         margin-top: 25px;
 
         &::before {
@@ -224,6 +228,7 @@
       .cardTitle {
         margin-top: 25px;
         margin-bottom: 7px;
+        margin-left: -5px;
 
         &::before {
           margin-top: -5px;
@@ -237,7 +242,6 @@
 
       .cardTitle {
         margin-top: 15px;
-        max-width: 100px;
 
         &::before {
           margin-top: 2px;
