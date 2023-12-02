@@ -2,33 +2,32 @@ import React from "react";
 import styles from "./Footer.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "next-i18next";
+import cx from "classnames";
 
 export const Footer = () => {
   const { t } = useTranslation();
-  const isDesktop = useMediaQuery("(min-width:1100px)");
 
   return (
     <footer className={styles.footer}>
       <div className={styles.firstBox}>
-        {isDesktop ? (
+        <>
           <Image
-            className={styles.logo}
+            className={cx(styles.logo, styles.desktopImage)}
             alt="logo"
             src="/images/logo.webp"
             width={75}
             height={75}
           />
-        ) : (
           <Image
-            className={styles.logo}
+            className={cx(styles.logo, styles.mobileImage)}
             alt="logo"
             src="/images/logoBig.webp"
             width={120}
             height={120}
           />
-        )}
+        </>
+
         <div className={styles.copyRight}>
           All rights reserved © 2023. Cariera Cosăuți
         </div>

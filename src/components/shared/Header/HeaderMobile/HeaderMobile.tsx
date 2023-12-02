@@ -31,7 +31,12 @@ export const HeaderMobile = () => {
         </Link>
 
         <LanguangeChange />
-        <button onClick={toggleOpenMenu} className={styles.menuBtn}>
+        <button
+          onClick={toggleOpenMenu}
+          className={styles.menuBtn}
+          aria-label="menu"
+          name="menu"
+        >
           <div
             className={
               isMenuOpened

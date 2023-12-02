@@ -42,15 +42,15 @@ export const LanguangeChange = () => {
 
       <div className={styles.languages}>
         <button className={styles.langBtn} onClick={() => changeLocale("ru")}>
-          <Image width={20} height={20} src="/images/RU.webp" alt="Ru" />
+          <Image width={20} height={15} src="/images/RU.webp" alt="Ru" />
           <span className={styles.langName}>RU</span>
         </button>
         <button className={styles.langBtn} onClick={() => changeLocale("en")}>
-          <Image width={20} height={20} src="/images/EN.webp" alt="En" />
+          <Image width={20} height={15} src="/images/EN.webp" alt="En" />
           <span className={styles.langName}>EN</span>
         </button>
         <button className={styles.langBtn} onClick={() => changeLocale("ro")}>
-          <Image width={20} height={20} src="/images/RO.webp" alt="Ro" />
+          <Image width={20} height={16} src="/images/RO.webp" alt="Ro" />
           <span className={styles.langName}>RO</span>
         </button>
       </div>
