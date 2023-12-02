@@ -1,13 +1,10 @@
 import React from "react";
 import styles from "./AboutCompany.module.scss";
 import Image from "next/image";
-import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "next-i18next";
+import cx from "classnames";
 
 export const AboutCompany = () => {
-  const isDesktop = useMediaQuery("(min-width:1100px)");
-  const isMobile = useMediaQuery("(min-width:730px)");
-
   const { t } = useTranslation("about-us");
 
   return (
@@ -96,31 +93,29 @@ export const AboutCompany = () => {
         </div>
       </div>
 
-      {isDesktop ? (
+      <>
         <Image
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, styles.desktopImage)}
           src="/images/about_bg.webp"
           width={1920}
           height={1000}
           alt="about"
         />
-      ) : isMobile ? (
         <Image
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, styles.tabletImage)}
           src="/images/about_bg_mobile.webp"
           width={768}
           height={985}
           alt="about"
         />
-      ) : (
         <Image
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, styles.mobileImage)}
           src="/images/about_bg_tablet.webp"
           width={768}
           height={985}
           alt="about"
         />
-      )}
+      </>
     </section>
   );
 };

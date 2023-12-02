@@ -146,6 +146,18 @@
   line-height: 1;
 }
 
+.desktopImage {
+  display: block;
+}
+
+.tabletImage {
+  display: none;
+}
+
+.mobileImage {
+  display: none;
+}
+
 @media (max-width: 1600px) {
   .sectionWrapper {
     padding: 0 50px;
@@ -252,6 +264,18 @@
 }
 
 @media (max-width: 1100px) {
+  .desktopImage {
+    display: none;
+  }
+
+  .tabletImage {
+    display: block;
+  }
+
+  .mobileImage {
+    display: none;
+  }
+
   .section {
     margin-top: 78px;
   }
@@ -280,6 +304,18 @@
 @media (max-width: 730px) {
   .right {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .desktopImage {
+    display: none;
+  }
+
+  .tabletImage {
+    display: none;
+  }
+
+  .mobileImage {
+    display: block;
   }
 }
 

@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import cx from "classnames";
 import { useTranslation } from "next-i18next";
 
 const StyledTextField = styled(TextField)`
@@ -51,23 +52,22 @@ export const ContactUs = () => {
 
   return (
     <section id="contact_us" className={styles.section}>
-      {isMobile ? (
+      <>
         <Image
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, styles.imageMobile)}
           src="/images/contact_bg_mobile.webp"
           width={500}
           height={1249}
           alt={t("contactUs_title")}
         />
-      ) : (
         <Image
-          className={styles.sectionImage}
+          className={cx(styles.sectionImage, styles.imageDesktop)}
           src="/images/contact_bg.webp"
           width={1920}
           height={914}
           alt={t("contactUs_title")}
         />
-      )}
+      </>
 
       <div className={styles.sectionContents}>
         <div className={styles.sectionHeader}>
