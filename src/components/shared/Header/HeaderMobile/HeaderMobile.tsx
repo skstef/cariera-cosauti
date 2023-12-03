@@ -80,13 +80,13 @@ export const HeaderMobile = () => {
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <Link onClick={onMenuElementClick} href="/#contact_us">
-                {t("header_contacts")}
+              <Link onClick={onMenuElementClick} href="/#human_resources">
+                {t("header_hr")}
               </Link>
             </li>
             <li className={styles.menuItem}>
-              <Link onClick={onMenuElementClick} href="/#human_resources">
-                {t("header_hr")}
+              <Link onClick={onMenuElementClick} href="/#contact_us">
+                {t("header_contacts")}
               </Link>
             </li>
           </ul>
