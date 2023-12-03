@@ -29,7 +29,7 @@ export const Footer = () => {
         </>
 
         <div className={styles.copyRight}>
-          All rights reserved © 2023. Cariera Cosăuți
+          {`All rights reserved © ${new Date().getFullYear()}. Cariera Cosăuți`}
         </div>
       </div>
 
