@@ -1,4 +1,15 @@
 .section {
+  &::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    right: 0;
+    left: 0;
+    background: linear-gradient(180deg, #212122 0%, rgba(33, 33, 34, 0) 64.42%);
+    height: 192px;
+    z-index: 5;
+  }
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -64,8 +75,9 @@
 .addressBox {
   display: flex;
   flex-direction: column;
-  margin-left: 54px;
-  margin-right: 45px;
+  margin-left: 35px;
+  margin-right: 35px;
+  min-width: 320px;
 }
 
 .contents {
@@ -210,6 +222,8 @@
   }
 
   .addressBox {
+    min-width: auto;
+    margin-right: 20px;
     margin-top: -4px;
   }
 
@@ -252,11 +266,17 @@
   }
 
   .contactForm {
-    max-width: 400px;
+    width: 100%;
   }
 
   .contactFormInput {
     width: 100%;
+
+    :global(.MuiInputBase-input) {
+      padding: 0;
+      height: 25px;
+      padding-left: 15px;
+    }
   }
 
   .mapIframe {

@@ -3,13 +3,11 @@ import styles from "./HumanResources.module.scss";
 import Image from "next/image";
 import {
   Alert,
-  Button,
   Snackbar,
   TextField,
   styled,
   useMediaQuery,
 } from "@mui/material";
-import { MuiFileInput } from "mui-file-input";
 import { useTranslation } from "next-i18next";
 import cx from "classnames";
 import emailjs from "@emailjs/browser";
@@ -36,38 +34,13 @@ const StyledTextField = styled(TextField)`
   border-color: white;
 `;
 
-const StyledFileInput = styled(MuiFileInput)`
-  & label.Mui-focused {
-    color: rgba(255, 255, 255, 0.7);
-  }
-  & .MuiOutlinedInput-root {
-    &.Mui-focused fieldset {
-      border-color: white;
-    }
-  }
-  & .MuiFileInput-placeholder {
-    color: #c0c0c0 !important;
-  }
-
-  fieldset {
-    border-color: white;
-  }
-
-  border-color: white;
-`;
-
 export const HumanResources = () => {
   const { t } = useTranslation("index");
-  const isMobile = useMediaQuery("(max-width:500px)");
+  const isMobile = useMediaQuery("(max-width:600px)");
 
-  const [cvFile, setCvFile] = useState<File | null>(null);
   const [successSnackbar, setSuccessSnackBar] = useState(false);
   const [errorSnackbar, setErrorSnackBar] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
-  const handleCvFileChange = (newValue: File | null) => {
-    setCvFile(newValue);
-  };
 
   const handleSuccessSnackbarClose = () => {
     setSuccessSnackBar(false);
@@ -82,7 +55,6 @@ export const HumanResources = () => {
     const formData = new FormData(e.target as HTMLFormElement);
     const formProps = Object.fromEntries(formData);
 
-    delete formProps.cv;
     setIsLoading(true);
 
     try {
@@ -216,17 +188,6 @@ export const HumanResources = () => {
                 InputProps={{ sx: { borderRadius: 0 } }}
               />
             )}
-
-            <StyledFileInput
-              className={styles.contactFormFileInput}
-              id="hr_cv"
-              name="cv"
-              placeholder={t("humanResources_upload")}
-              value={cvFile}
-              //@ts-ignore
-              onChange={handleCvFileChange}
-              InputProps={{ sx: { borderRadius: 0 } }}
-            />
 
             <div className={styles.contactFormSubmitBtnWrapper}>
               <LoadingButton

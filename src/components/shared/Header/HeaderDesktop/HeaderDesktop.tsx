@@ -31,10 +31,10 @@ export const HeaderDesktop = () => {
             <Link href="/#policies">{t("header_politics")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#contact_us">{t("header_contacts")}</Link>
+            <Link href="/#human_resources">{t("header_hr")}</Link>
           </li>
           <li className={styles.menuItem}>
-            <Link href="/#human_resources">{t("header_hr")}</Link>
+            <Link href="/#contact_us">{t("header_contacts")}</Link>
           </li>
         </ul>
       </nav>

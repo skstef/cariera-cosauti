@@ -34,7 +34,7 @@ const StyledTextField = styled(TextField)`
     color: #f7f0e3;
   }
 
-  background: #212122;
+  background: rgba(33, 33, 34, 0.7);
   border-color: white;
   width: 372px;
 `;

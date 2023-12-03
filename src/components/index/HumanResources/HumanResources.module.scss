@@ -89,14 +89,6 @@
   }
 }
 
-.contactFormFileInput {
-  width: 700px;
-
-  input {
-    height: 160px;
-  }
-}
-
 .contactFormTextFieldMobile {
   width: 100%;
 
@@ -184,22 +176,6 @@
     }
   }
 
-  .contactFormFileInput {
-    width: calc(50% - 10px);
-    :global(.MuiInputBase-root) {
-      height: 180px;
-    }
-
-    input {
-      height: 140px;
-      width: 100%;
-    }
-
-    :global(span.MuiFileInput-placeholder) {
-      font-size: 0.75rem;
-    }
-  }
-
   .contactForm {
     margin-top: 43px;
   }
@@ -224,6 +200,7 @@
 
 @media (max-width: 750px) {
   .contactForm {
+    width: 100%;
     flex-direction: column;
   }
 
@@ -231,14 +208,10 @@
     min-width: 150px;
     max-width: none;
     width: 100%;
-    flex: 1;
+    flex: none;
   }
 
   .contactFormTextField {
-    width: 100%;
-  }
-
-  .contactFormFileInput {
     width: 100%;
   }
 }
@@ -289,20 +262,15 @@
     }
   }
 
-  .contactFormFileInput {
-    :global(.MuiInputBase-root) {
-      height: 70px;
-    }
-
-    input {
-      height: 35px;
-      width: 100%;
-    }
-  }
-
   .contactFormInput {
     :global(.MuiFormLabel-root[data-shrink="false"]) {
       top: -5px;
+    }
+
+    :global(.MuiInputBase-input) {
+      padding: 0;
+      height: 25px;
+      padding-left: 15px;
     }
   }
 
