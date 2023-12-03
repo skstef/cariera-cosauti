@@ -61,18 +61,19 @@
 .aboutDescription {
   color: #fff;
   font-weight: 400;
-  line-height: 1;
+  line-height: 1.181;
   font-size: 1.375rem;
   margin-top: 56px;
+  font-family: "Qanelas";
 }
 
 .left {
-  max-width: 720px;
+  max-width: 730px;
 }
 
 .right {
   display: grid;
-  gap: 20px;
+  gap: 120px;
   justify-content: space-between;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
@@ -125,7 +126,7 @@
   color: #fdc019;
   text-transform: uppercase;
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 15px;
 
   &::before {
     position: absolute;
@@ -142,8 +143,10 @@
 .cardData {
   font-weight: 400;
   color: #fff;
-  font-size: 1.375rem;
-  line-height: 1;
+  font-size: 1.125rem;
+  line-height: 1.22;
+  font-family: "Qanelas";
+  text-align: center;
 }
 
 .desktopImage {
@@ -156,6 +159,12 @@
 
 .mobileImage {
   display: none;
+}
+
+@media (max-width: 1800px) {
+  .right {
+    gap: 20px;
+  }
 }
 
 @media (max-width: 1600px) {
