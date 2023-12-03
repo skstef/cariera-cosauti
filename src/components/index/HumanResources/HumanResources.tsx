@@ -59,10 +59,10 @@ export const HumanResources = () => {
 
     try {
       await emailjs.send(
-        "service_drhxdqr",
-        "template_g1dyaqm",
+        "service_edbruy6",
+        "template_gh6rops",
         formProps,
-        "JypL3Vvdua5hdqlZ5"
+        "AlxG99wlZX5hsHNCl"
       );
 
       setSuccessSnackBar(true);

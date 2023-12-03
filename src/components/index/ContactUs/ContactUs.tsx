@@ -64,10 +64,10 @@ export const ContactUs = () => {
 
     try {
       await emailjs.send(
-        "service_drhxdqr",
-        "template_nztxy6y",
+        "service_edbruy6",
+        "template_22r1g4j",
         formProps,
-        "JypL3Vvdua5hdqlZ5"
+        "AlxG99wlZX5hsHNCl"
       );
 
       setSuccessSnackBar(true);
