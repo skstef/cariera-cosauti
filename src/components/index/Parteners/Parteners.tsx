@@ -4,19 +4,10 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 const partenersList = [
-  "/images/partener_4.webp",
-  "/images/partener_10.webp",
-  "/images/partener_3.webp",
-  "/images/partener_8.webp",
-  "/images/partener_2.webp",
-  "/images/partener_9.webp",
-  "/images/partener_7.webp",
-  "/images/partener_11.webp",
-  "/images/partener_6.webp",
-
   "/images/partener_5.webp",
   "/images/partener_1.webp",
-  "/images/partener_12.webp",
+  "/images/partener_3.webp",
+  "/images/partener_11.webp",
 ];
 
 export const Parteners = () => {

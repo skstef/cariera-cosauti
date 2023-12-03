@@ -1,7 +1,7 @@
 .section {
   max-width: 1920px;
   margin: 0 auto;
-  padding-bottom: 35px;
+  padding-bottom: 70px;
 }
 
 .sectionHeader {
@@ -80,7 +80,7 @@
   }
 
   .partenersGrid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     margin: 0 10px;
   }
 
@@ -131,14 +131,16 @@
     }
   }
 
-  .imageContainer {
-    width: 70px;
-    height: 54px;
-  }
-
   .partenersGrid {
     margin: 0;
     row-gap: 47px;
     column-gap: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .imageContainer {
+    width: 140px;
+    height: 100px;
   }
 }
