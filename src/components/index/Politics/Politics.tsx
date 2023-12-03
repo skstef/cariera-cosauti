@@ -10,18 +10,22 @@ export const Politics = () => {
   const politicsList = [
     {
       name: t("policies_cardTitle_1"),
+      content: t("policies_cardContent_1"),
       number: 1,
     },
     {
       name: t("policies_cardTitle_2"),
+      content: t("policies_cardContent_2"),
       number: 2,
     },
     {
       name: t("policies_cardTitle_3"),
+      content: t("policies_cardContent_3"),
       number: 3,
     },
     {
       name: t("policies_cardTitle_4"),
+      content: t("policies_cardContent_4"),
       number: 4,
     },
   ];
@@ -38,12 +42,14 @@ export const Politics = () => {
           {politicsList.map((el) => {
             return (
               <div key={el.number} className={styles.card}>
-                <div className={styles.cardTitleWrapper}>
-                  <p className={styles.cardNumber}>{el.number}.</p>
-                  <p className={styles.cardTitle}>{el.name}</p>
-                </div>
+                <div className={styles.cardInner}>
+                  <div className={styles.cardTitleWrapper}>
+                    <p className={styles.cardNumber}>{el.number}.</p>
+                    <p className={styles.cardTitle}>{el.name}</p>
+                  </div>
 
-                <p className={styles.cardContent}></p>
+                  <p className={styles.cardContent}>{el.content}</p>
+                </div>
               </div>
             );
           })}
