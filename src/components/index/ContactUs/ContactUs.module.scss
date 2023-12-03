@@ -234,6 +234,12 @@
 }
 
 @media (max-width: 600px) {
+  .section {
+    &::before {
+      height: 60px;
+    }
+  }
+
   .imageDesktop {
     display: none;
   }

@@ -206,7 +206,7 @@ export const HumanResources = () => {
           src="/images/hr_bg.webp"
           className={cx(styles.sectionImage, "visibleOn1100AndMore")}
           width={1920}
-          height={1368}
+          height={1227}
           alt="cadre"
         />
 
