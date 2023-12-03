@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslation } from "next-i18next";
 
 const partenersList = [
-  "/images/partener_5.webp",
+  "/images/partener_2.webp",
   "/images/partener_1.webp",
   "/images/partener_3.webp",
   "/images/partener_11.webp",
