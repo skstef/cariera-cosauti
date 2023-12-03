@@ -1,51 +1,81 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./Certificates.module.scss";
 import Image from "next/image";
-import cx from "classnames";
 import { useTranslation } from "next-i18next";
+import cx from "classnames";
+
+const images = [
+  "/images/certificate_1.webp",
+  "/images/certificate_2.webp",
+  "/images/certificate_3.webp",
+  "/images/certificate_4.webp",
+  "/images/certificate_5.webp",
+];
 
 export const Certificates = () => {
   const { t } = useTranslation("index");
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const handleScrollLeft = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -500, behavior: "smooth" });
+    }
+  };
+
+  const handleScrollRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 500, behavior: "smooth" });
+    }
+  };
+
+  const items = images.map((el, index) => (
+    <div className={styles.imageWrapper} key={el}>
+      <Image
+        width={367}
+        height={573}
+        className={styles.image}
+        src={el}
+        draggable="false"
+        alt="Galerie"
+      />
+    </div>
+  ));
 
   return (
-    <section className={styles.section}>
+    <section id="galery" className={styles.section}>
       <div className={styles.sectionHeader}>
         <h3>{t("certificates_title")}</h3>
       </div>
 
-      <div className={styles.certificatesContainer}>
-        <div className={styles.firstRow}>
-          <div className={styles.certificateContainer} />
-          <div className={styles.certificateContainer} />
+      <div className={styles.imagesCarouselWrapper}>
+        <button onClick={handleScrollLeft} className={styles.leftArrowBtn}>
+          <Image
+            width={104}
+            height={130}
+            src="/images/leftArrow.webp"
+            alt="left"
+            draggable="false"
+          />
+        </button>
+        <div ref={containerRef} className={styles.imagesCarousel}>
+          {items}
         </div>
-        <div className={styles.secondRow}>
-          <div className={styles.certificateContainer} />
-          <div className={styles.certificateContainer} />
-        </div>
+        <button onClick={handleScrollRight} className={styles.rightArrowBtn}>
+          <Image
+            width={104}
+            height={130}
+            src="/images/rightArrow.webp"
+            alt="right"
+            draggable="false"
+          />
+        </button>
       </div>
-
       <>
         <Image
           src="/images/certificates.webp"
-          className={cx(styles.sectionImage, "visibleOn1100AndMore")}
+          className={cx(styles.sectionImage)}
           width={1920}
           height={816}
-          alt="certificates"
-        />
-
-        <Image
-          src="/images/certificatesTablet.webp"
-          className={cx(styles.sectionImage, "visibleBetween500And1100")}
-          width={768}
-          height={853}
-          alt="certificates"
-        />
-
-        <Image
-          src="/images/certificatesMobile.webp"
-          className={cx(styles.sectionImage, "visibleOn500AndLess")}
-          width={768}
-          height={853}
           alt="certificates"
         />
       </>
