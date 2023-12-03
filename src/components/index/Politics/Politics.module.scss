@@ -86,7 +86,7 @@
 
 .card {
   width: 380px;
-  height: 380px;
+  height: 400px;
   box-shadow: 0px 10px 36px 0px rgba(162, 162, 162, 0.5);
   background: #161616;
   padding: 10px 15px;
@@ -131,6 +131,10 @@
 }
 
 @media (max-width: 1800px) {
+  .card {
+    height: 380px;
+  }
+
   .cardsWrapper {
     justify-items: center;
     grid-template-columns: 1fr 1fr;
