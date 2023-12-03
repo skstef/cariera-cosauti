@@ -38,8 +38,12 @@ export const Politics = () => {
           {politicsList.map((el) => {
             return (
               <div key={el.number} className={styles.card}>
-                <p className={styles.cardNumber}>{el.number}.</p>
-                <p className={styles.cardTitle}>{el.name}</p>
+                <div className={styles.cardTitleWrapper}>
+                  <p className={styles.cardNumber}>{el.number}.</p>
+                  <p className={styles.cardTitle}>{el.name}</p>
+                </div>
+
+                <p className={styles.cardContent}></p>
               </div>
             );
           })}

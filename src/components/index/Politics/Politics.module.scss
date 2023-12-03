@@ -86,34 +86,25 @@
   }
 }
 
-.cardNumber {
-  color: #fff;
-  font-family: "Exo 2";
-  font-size: 3.75rem;
-  font-weight: 400;
-  display: inline-block;
-  line-height: 1;
-  padding-bottom: 32px;
-  position: relative;
+.cardTitleWrapper {
+  display: flex;
+  align-items: center;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: -2px;
-    width: 32px;
-    height: 3px;
-    background: #e8cf7a;
-  }
+.cardNumber {
+  color: #e8cf7a;
+  font-size: 1.875rem;
+  margin-right: 2px;
+  font-weight: 600;
 }
 
 .cardTitle {
-  margin-top: 20px;
   color: #fff;
-  font-family: "Lato";
-  font-size: 1.62rem;
+  font-family: "Exo 2";
+  font-size: 1.562rem;
   line-height: 1;
-  font-weight: 400;
+  font-weight: 500;
+  line-height: 0.88;
 }
 
 @media (max-width: 1800px) {
@@ -226,11 +217,6 @@
 
   .cardNumber {
     font-size: 1.625rem;
-    padding-bottom: 17px;
-
-    &::after {
-      height: 2px;
-    }
   }
 
   .cardTitle {
