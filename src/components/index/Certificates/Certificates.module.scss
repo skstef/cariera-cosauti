@@ -5,6 +5,29 @@
   margin: 0 auto;
   margin-top: 100px;
   padding-top: 100px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background: linear-gradient(180deg, #212122 0%, rgba(33, 33, 34, 0) 64.42%);
+    height: 192px;
+    z-index: 1;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    background: linear-gradient(180deg, #212122 0%, rgba(33, 33, 34, 0) 64.42%);
+    height: 192px;
+    z-index: 1;
+    transform: rotate(180deg);
+  }
 }
 
 .sectionImage {
@@ -65,6 +88,7 @@
 .imagesCarouselWrapper {
   margin: 0 -150px;
   position: relative;
+  z-index: 20;
 }
 
 .imagesCarousel {
@@ -180,6 +204,14 @@
     padding: 0 24px;
     margin-bottom: 35px;
     margin-top: 50px;
+
+    &::before {
+      height: 80px;
+    }
+
+    &::after {
+      height: 80px;
+    }
   }
 
   .imagesCarouselWrapper {
@@ -246,6 +278,14 @@
   .section {
     padding: 0 14px;
     margin-bottom: 0;
+
+    &::before {
+      height: 60px;
+    }
+
+    &::after {
+      height: 60px;
+    }
   }
 
   .imagesCarouselWrapper {
