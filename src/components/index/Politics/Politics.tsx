@@ -65,18 +65,10 @@ export const Politics = () => {
       />
 
       <Image
-        className={cx(styles.sectionImage, "visibleBetween500And1100")}
+        className={cx(styles.sectionImage, "visibleOn1100Less")}
         src="/images/politicsTablet.webp"
         width={1920}
         height={732}
-        alt="Politicile de bază"
-      />
-
-      <Image
-        className={cx(styles.sectionImage, "visibleOn500AndLess")}
-        src="/images/politicsMobile.webp"
-        width={360}
-        height={445}
         alt="Politicile de bază"
       />
     </section>
