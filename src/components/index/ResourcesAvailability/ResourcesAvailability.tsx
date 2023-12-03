@@ -12,8 +12,8 @@ export const ResourcesAvailability = () => {
         <Image
           src="/images/resourcesAvailability.webp"
           alt="Despre noi"
-          width={997}
-          height={553}
+          width={847}
+          height={470}
           className="visibleOn1100AndMore"
         />
         <Image
