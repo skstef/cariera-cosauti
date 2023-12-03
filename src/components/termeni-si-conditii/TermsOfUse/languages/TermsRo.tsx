@@ -11,8 +11,8 @@ export const TermsRo = () => (
       <a href="https://www.cariera-cosauti.md">www.cariera-cosauti.md</a> este
       proprietatea și administrat de” Cariera de granit și pietriș din Soroca”,
       cu sediul orașul Soroca, str. Cosăuți, 4, având următoarele date de
-      contact: e-mail: carieracosauti@mail.ru, tel/fax: +373 230 20710, denumită
-      în continuare compania.
+      contact: e-mail: info@cariera-cosauti.md, tel/fax: +373 230 20710,
+      denumită în continuare compania.
       <br />
       <br />
       Compania acordă o atenție deosebită protejării confidențialității și
@@ -161,7 +161,7 @@ export const TermsRo = () => (
       <br />
       Pentru a obține autorizație pentru stabilirea hyperlink-urilor menționate
       mai sus, vă rugăm să contactați compania prin e-mail la adresa:
-      carieracosauti@mail.ru. Solicitarea trebuie să includă URL-ul unde se
+      info@cariera-cosauti.md. Solicitarea trebuie să includă URL-ul unde se
       dorește stabilirea hiperlink-urilor.
       <br />
       Accesul la pagina care conține hyperlink-urile către website-ul{" "}
@@ -196,7 +196,7 @@ export const TermsRo = () => (
       <br />
       <br />
       Pentru informații suplimentare, contactați următoarea adresă:
-      carieracosauti@mail.ru.
+      info@cariera-cosauti.md.
       <br />
       Copyrigtht © 2023 Toate drepturile rezervate
     </p>

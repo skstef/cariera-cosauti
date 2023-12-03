@@ -11,7 +11,7 @@ export const TermsEn = () => (
       <a href="https://www.cariera-cosauti.md">www.cariera-cosauti.md</a> is
       owned and managed by "Granite and Gravel Quarry of Soroca," located in
       Soroca city, 4 Cosăuți Street, with the following contact details: email:
-      carieracosauti@mail.ru, tel/fax: +373 230 20710, hereinafter referred to
+      info@cariera-cosauti.md, tel/fax: +373 230 20710, hereinafter referred to
       as the company.
       <br />
       <br />
@@ -135,9 +135,10 @@ export const TermsEn = () => (
       website within another website through framing, integration, or any
       similar process is strictly prohibited, except for exceptional
       authorization from the company. To obtain authorization for the mentioned
-      hyperlinks, please contact the company by email at carieracosauti@mail.ru.
-      The request must include the URL where the hyperlinks are desired to be
-      established. Access to the page containing hyperlinks to the{" "}
+      hyperlinks, please contact the company by email at
+      info@cariera-cosauti.md. The request must include the URL where the
+      hyperlinks are desired to be established. Access to the page containing
+      hyperlinks to the{" "}
       <a href="https://www.cariera-cosauti.md">www.cariera-cosauti.md</a>{" "}
       website should be free.
       <br />
@@ -150,7 +151,7 @@ export const TermsEn = () => (
       company.
       <br />
       To obtain permission to set the above hyperlinks, you must contact the
-      company by e-mail: carieracosauti@mail.ru. The request must specify the
+      company by e-mail: info@cariera-cosauti.md. The request must specify the
       URL to which the hyperlink is to be set.
       <br />
       Access to the page containing hyperlinks to{" "}
@@ -180,7 +181,7 @@ export const TermsEn = () => (
       <br />
       <br />
       For more information, contact the following address:
-      carieracosauti@mail.ru. Copyright © 2023. All rights reserved.
+      info@cariera-cosauti.md. Copyright © 2023. All rights reserved.
     </p>
   </>
 );
