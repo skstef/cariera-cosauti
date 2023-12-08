@@ -198,7 +198,7 @@ export const TermsRo = () => (
       Pentru informații suplimentare, contactați următoarea adresă:
       info@cariera-cosauti.md.
       <br />
-      Copyrigtht © 2023 Toate drepturile rezervate
+      Copyrigtht © {new Date().getFullYear()} Toate drepturile rezervate
     </p>
   </>
 );

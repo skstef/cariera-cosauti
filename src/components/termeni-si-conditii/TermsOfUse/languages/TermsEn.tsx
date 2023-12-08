@@ -181,7 +181,8 @@ export const TermsEn = () => (
       <br />
       <br />
       For more information, contact the following address:
-      info@cariera-cosauti.md. Copyright © 2023. All rights reserved.
+      info@cariera-cosauti.md. Copyright © {new Date().getFullYear()}. All
+      rights reserved.
     </p>
   </>
 );
