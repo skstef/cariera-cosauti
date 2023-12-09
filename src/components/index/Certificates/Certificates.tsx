@@ -3,6 +3,7 @@ import styles from "./Certificates.module.scss";
 import Image from "next/image";
 import { useTranslation } from "next-i18next";
 import cx from "classnames";
+import { useMediaQuery } from "@mui/material";
 
 const images = [
   "/images/certificate_0.webp",
@@ -16,16 +17,25 @@ const images = [
 export const Certificates = () => {
   const { t } = useTranslation("index");
   const containerRef = useRef<HTMLDivElement>(null);
+  const isMobile = useMediaQuery("(max-width:600px)");
+
+  const scrollDistance = isMobile ? 200 : 500;
 
   const handleScrollLeft = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -500, behavior: "smooth" });
+      containerRef.current.scrollBy({
+        left: -1 * scrollDistance,
+        behavior: "smooth",
+      });
     }
   };
 
   const handleScrollRight = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 500, behavior: "smooth" });
+      containerRef.current.scrollBy({
+        left: scrollDistance,
+        behavior: "smooth",
+      });
     }
   };
 

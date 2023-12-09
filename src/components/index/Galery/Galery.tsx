@@ -40,19 +40,26 @@ const imagesMobile = [
 
 export const Galery = () => {
   const isMobile = useMediaQuery("(max-width:600px)");
+  const scrollDistance = isMobile ? 200 : 500;
 
   const { t } = useTranslation("index");
   const containerRef = useRef<HTMLDivElement>(null);
 
   const handleScrollLeft = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: -500, behavior: "smooth" });
+      containerRef.current.scrollBy({
+        left: -1 * scrollDistance,
+        behavior: "smooth",
+      });
     }
   };
 
   const handleScrollRight = () => {
     if (containerRef.current) {
-      containerRef.current.scrollBy({ left: 500, behavior: "smooth" });
+      containerRef.current.scrollBy({
+        left: scrollDistance,
+        behavior: "smooth",
+      });
     }
   };
 
