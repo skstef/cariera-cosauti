@@ -21,74 +21,82 @@ export const AboutCompany = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.card}>
-            <Image
-              className={styles.cardImage}
-              src={"/images/calitatea.webp"}
-              width={63}
-              height={78}
-              alt="quality"
-            />
+            <div className={styles.cardInner}>
+              <Image
+                className={styles.cardImage}
+                src={"/images/calitatea.webp"}
+                width={63}
+                height={78}
+                alt="quality"
+              />
 
-            <h5
-              className={styles.cardTitle}
-              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_1") }}
-            />
+              <h5
+                className={styles.cardTitle}
+                dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_1") }}
+              />
 
-            <p className={styles.cardData}>{t("aboutUs_cardContent_1")}</p>
+              <p className={styles.cardData}>{t("aboutUs_cardContent_1")}</p>
+            </div>
           </div>
 
           <div className={styles.card}>
-            <Image
-              className={styles.cardImage}
-              src={"/images/personalul.webp"}
-              width={73}
-              height={67}
-              alt="staff"
-            />
+            <div className={styles.cardInner}>
+              <Image
+                className={styles.cardImage}
+                src={"/images/personalul.webp"}
+                width={73}
+                height={67}
+                alt="staff"
+              />
 
-            <h5
-              className={styles.cardTitle}
-              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_2") }}
-            />
+              <h5
+                className={styles.cardTitle}
+                dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_2") }}
+              />
 
-            <p className={styles.cardData}>{t("aboutUs_cardContent_2")}</p>
+              <p className={styles.cardData}>{t("aboutUs_cardContent_2")}</p>
+            </div>
           </div>
 
           <div className={styles.card}>
-            <Image
-              className={styles.cardImage}
-              src={"/images/capacitatea.webp"}
-              width={78}
-              height={51}
-              alt="capacity"
-            />
+            <div className={styles.cardInner}>
+              <Image
+                className={styles.cardImage}
+                src={"/images/capacitatea.webp"}
+                width={78}
+                height={51}
+                alt="capacity"
+              />
 
-            <h5
-              className={styles.cardTitle}
-              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_3") }}
-            />
+              <h5
+                className={styles.cardTitle}
+                dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_3") }}
+              />
 
-            <p
-              className={styles.cardData}
-              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardContent_3") }}
-            />
+              <p
+                className={styles.cardData}
+                dangerouslySetInnerHTML={{ __html: t("aboutUs_cardContent_3") }}
+              />
+            </div>
           </div>
 
           <div className={styles.card}>
-            <Image
-              className={styles.cardImage}
-              src={"/images/investitii.webp"}
-              width={70}
-              height={70}
-              alt={"investments"}
-            />
+            <div className={styles.cardInner}>
+              <Image
+                className={styles.cardImage}
+                src={"/images/investitii.webp"}
+                width={70}
+                height={70}
+                alt={"investments"}
+              />
 
-            <h5
-              className={styles.cardTitle}
-              dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_4") }}
-            />
+              <h5
+                className={styles.cardTitle}
+                dangerouslySetInnerHTML={{ __html: t("aboutUs_cardTitle_4") }}
+              />
 
-            <p className={styles.cardData}>{t("aboutUs_cardContent_4")}</p>
+              <p className={styles.cardData}>{t("aboutUs_cardContent_4")}</p>
+            </div>
           </div>
         </div>
       </div>
