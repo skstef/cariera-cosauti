@@ -109,18 +109,20 @@ export const AboutCompany = () => {
           height={1000}
           alt="about"
         />
+
         <Image
           className={cx(styles.sectionImage, styles.tabletImage)}
-          src="/images/about_bg_mobile.webp"
+          src="/images/about_bg_tablet.webp"
           width={768}
           height={985}
           alt="about"
         />
+
         <Image
           className={cx(styles.sectionImage, styles.mobileImage)}
-          src="/images/about_bg_tablet.webp"
-          width={768}
-          height={985}
+          src="/images/about_bg_mobile.webp"
+          width={360}
+          height={1496}
           alt="about"
         />
       </>
