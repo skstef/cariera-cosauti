@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 import cx from "classnames";
 
 const images = [
+  "/images/certificate_0.webp",
   "/images/certificate_1.webp",
   "/images/certificate_2.webp",
   "/images/certificate_3.webp",
