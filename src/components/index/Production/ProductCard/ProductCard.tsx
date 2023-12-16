@@ -5,26 +5,30 @@ import Image from "next/image";
 interface IProductCardProps {
   image: string;
   name: string;
-  descriptionFirstRow: string;
-  descriptionSecondRow: string;
+  description: string;
 }
 
 export const ProductCard: React.FC<IProductCardProps> = ({
   image,
   name,
-  descriptionFirstRow,
-  descriptionSecondRow,
+  description,
 }) => {
   return (
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner}>
         <div className={styles.flipCardFront}>
-          <Image src={image} alt={name} width={387} height={397} />
+          {image.length ? (
+            <Image src={image} alt={name} width={387} height={397} />
+          ) : (
+            <div className={styles.imagePlaceholder} />
+          )}
           <p className={styles.productName}>{name}</p>
         </div>
         <div className={styles.flipCardBack}>
-          <p className={styles.firstRow}>{descriptionFirstRow}</p>
-          <p className={styles.secondRow}>{descriptionSecondRow}</p>
+          <p
+            className={styles.row}
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
       </div>
     </div>

@@ -23,15 +23,15 @@
   margin-top: 16px;
 }
 
-.firstRow,
-.secondRow {
+.row {
   color: #fff;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.37rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1;
-  max-width: 234px;
+  max-width: 348px;
+  font-family: "Qanelas";
 }
 
 // Flip card setup
@@ -78,6 +78,12 @@
   transform: rotateY(180deg);
 }
 
+.imagePlaceholder {
+  background: #c4c4c4;
+  width: 387px;
+  height: 397px;
+}
+
 @media (max-width: 1700px) {
   .flipCard {
     height: 380px;
@@ -85,7 +91,8 @@
   }
 
   .flipCardFront {
-    img {
+    img,
+    .imagePlaceholder {
       width: 320px;
       height: 320px;
       object-fit: cover;
@@ -100,15 +107,15 @@
   }
 
   .flipCardFront {
-    img {
+    img,
+    .imagePlaceholder {
       width: 250px;
       height: 250px;
       object-fit: cover;
     }
   }
 
-  .firstRow,
-  .secondRow,
+  .row,
   .productName {
     font-size: 1.25rem;
   }
@@ -121,7 +128,8 @@
   }
 
   .flipCardFront {
-    img {
+    img,
+    .imagePlaceholder {
       width: 168px;
       height: 168px;
       object-fit: cover;
@@ -132,8 +140,7 @@
     margin-top: 7px;
   }
 
-  .firstRow,
-  .secondRow,
+  .row,
   .productName {
     font-size: 0.75rem;
     font-weight: 400;
@@ -147,13 +154,13 @@
     height: 166px;
   }
 
-  .firstRow,
-  .secondRow {
+  .row {
     padding: 0 15px;
   }
 
   .flipCardFront {
-    img {
+    img,
+    .imagePlaceholder {
       width: 156px;
       height: 146px;
     }

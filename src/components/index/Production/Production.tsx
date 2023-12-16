@@ -23,8 +23,7 @@ export const Production = () => {
             key={el.image}
             name={t(el.name)}
             image={el.image}
-            descriptionFirstRow={el.descriptionFirstRow}
-            descriptionSecondRow={el.descriptionSecondRow}
+            description={t(el.description)}
           />
         ))}
       </div>
@@ -39,8 +38,7 @@ export const Production = () => {
             key={el.image}
             name={t(el.name)}
             image={el.image}
-            descriptionFirstRow={el.descriptionFirstRow}
-            descriptionSecondRow={el.descriptionSecondRow}
+            description={t(el.description)}
           />
         ))}
       </div>
