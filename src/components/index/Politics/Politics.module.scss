@@ -1,7 +1,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  min-height: 732px;
+  min-height: 780px;
   position: relative;
 
   max-width: 1920px;
@@ -18,6 +18,10 @@
     background: linear-gradient(180deg, #212122 0%, rgba(33, 33, 34, 0) 64.42%);
     transform: rotate(180deg);
   }
+}
+
+.sectionExpanded {
+  min-height: 920px;
 }
 
 .sectionWrapper {
@@ -128,6 +132,24 @@
   color: #fff;
   margin-top: 15px;
   margin-bottom: 30px;
+}
+
+.accordionTitle {
+  font-family: "Exo 2";
+  font-weight: 500;
+  font-size: 1.625rem;
+}
+
+.accordionDetails {
+  font-family: "Qanelas";
+  font-size: 17px;
+  font-size: 1.0625rem;
+  line-height: 1.29;
+}
+
+.accordionTitleNumber {
+  margin-right: 10px;
+  color: #e8cf7a;
 }
 
 @media (max-width: 1800px) {
@@ -254,10 +276,6 @@
     &::after {
       height: 50px;
     }
-  }
-
-  .section {
-    min-height: 445px;
   }
 
   .sectionWrapper {
