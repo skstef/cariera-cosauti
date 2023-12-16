@@ -9,10 +9,10 @@ export const TermsEn = () => (
       <br />
       Welcome to the website: "Granite and Gravel Quarry of Soroca"! The website{" "}
       <a href="https://www.cariera-cosauti.md">www.cariera-cosauti.md</a> is
-      owned and managed by "Granite and Gravel Quarry of Soroca," located in
-      Soroca city, 4 Cosăuți Street, with the following contact details: email:
-      info@cariera-cosauti.md, tel/fax: +373 230 20710, hereinafter referred to
-      as the company.
+      owned and managed by JSC "Cariera de granit şi pietriş din Soroca",
+      located in Soroca city, 4 Cosăuți Street, with the following contact
+      details: email: info@cariera-cosauti.md, tel: +373 230 20710, hereinafter
+      referred to as the company.
       <br />
       <br />
       The company pays special attention to protecting the confidentiality and
