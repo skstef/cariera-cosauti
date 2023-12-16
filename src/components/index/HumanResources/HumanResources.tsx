@@ -58,12 +58,7 @@ export const HumanResources = () => {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
-        "service_edbruy6",
-        "template_gh6rops",
-        formProps,
-        "AlxG99wlZX5hsHNCl"
-      );
+      await emailjs.send("", "", formProps, "");
 
       setSuccessSnackBar(true);
     } catch {

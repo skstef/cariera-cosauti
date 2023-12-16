@@ -63,12 +63,7 @@ export const ContactUs = () => {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
-        "service_edbruy6",
-        "template_22r1g4j",
-        formProps,
-        "AlxG99wlZX5hsHNCl"
-      );
+      await emailjs.send("", "", formProps, "");
 
       setSuccessSnackBar(true);
     } catch {
