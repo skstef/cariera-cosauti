@@ -8,6 +8,8 @@ const partenersList = [
   "/images/partener_1.webp",
   "/images/partener_3.webp",
   "/images/partener_11.webp",
+  "/images/partener_4.webp",
+  "/images/partener_5.webp",
 ];
 
 export const Parteners = () => {
