@@ -32,6 +32,7 @@
   line-height: 1;
   max-width: 348px;
   font-family: "Qanelas";
+  margin: 0 8px;
 }
 
 // Flip card setup
@@ -115,7 +116,10 @@
     }
   }
 
-  .row,
+  .row {
+    font-size: 1rem;
+  }
+
   .productName {
     font-size: 1.25rem;
   }
@@ -140,7 +144,11 @@
     margin-top: 7px;
   }
 
-  .row,
+  .row {
+    font-size: 0.75rem;
+    line-height: 1.08;
+  }
+
   .productName {
     font-size: 0.75rem;
     font-weight: 400;
@@ -155,7 +163,9 @@
   }
 
   .row {
-    padding: 0 15px;
+    margin: 11px 8px;
+    font-size: 0.625rem;
+    line-height: 1.2;
   }
 
   .flipCardFront {
