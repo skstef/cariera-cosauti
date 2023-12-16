@@ -134,17 +134,6 @@
   text-transform: uppercase;
   position: relative;
   margin-bottom: 15px;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: -22px;
-    width: 32px;
-    height: 3px;
-    background: #fdc019;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 }
 
 .cardData {
@@ -197,7 +186,6 @@
   }
 
   .right {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-left: 0;
     margin-top: 30px;
     justify-content: space-between;
@@ -211,7 +199,7 @@
   .cardTitle {
     font-size: 1.25rem;
     font-weight: 500;
-    margin-top: 25px;
+    margin-top: 19px;
 
     span {
       font-size: 0.8125rem;
@@ -224,8 +212,8 @@
   }
 
   .card {
-    width: 230px;
-    height: 281px;
+    width: 340px;
+    height: 260px;
     padding: 7px 8px 0 10px;
 
     .cardTitle {
@@ -280,47 +268,6 @@
 }
 
 @media (max-width: 1100px) {
-  .card {
-    width: 156px;
-    height: 281px;
-    position: relative;
-
-    &::after {
-      content: "";
-      pointer-events: none;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 115px;
-      transform: rotate(180deg);
-      background: linear-gradient(
-        180deg,
-        #212122 0%,
-        rgba(33, 33, 34, 0) 64.42%
-      );
-    }
-  }
-
-  .cardInner {
-    height: 100%;
-    overflow-y: auto;
-    padding-bottom: 40px;
-
-    &::-webkit-scrollbar {
-      width: 0;
-      height: 0;
-    }
-    &::-webkit-scrollbar-thumb {
-      background: transparent;
-    }
-    &::-webkit-scrollbar-track {
-      background: transparent;
-    }
-    scrollbar-width: none;
-    scrollbar-color: transparent transparent;
-  }
-
   .desktopImage {
     display: none;
   }
@@ -358,7 +305,13 @@
   }
 }
 
-@media (max-width: 730px) {
+@media (max-width: 760px) {
+  .card {
+    width: 250px;
+    height: 338px;
+    box-shadow: 0px 10px 36px 0px rgba(162, 162, 162, 0.5);
+  }
+
   .right {
     grid-template-columns: 1fr 1fr;
   }
@@ -374,9 +327,23 @@
   .mobileImage {
     display: block;
   }
+}
 
+@media (max-width: 575px) {
   .card {
-    box-shadow: 0px 10px 36px 0px rgba(162, 162, 162, 0.5);
+    width: 159px;
+  }
+
+  .cardData {
+    line-height: 1.53;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+  }
+
+  .right {
+    gap: 10px;
   }
 }
 
