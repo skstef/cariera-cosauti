@@ -35,14 +35,14 @@
   "production_itemTitle_12": "Fracția 90*180",
   "production_itemDescription_12": "Se utilizează pentru drenaj, pentru stabilizarea taluzurilor terasamentelor, pentru design peisajistic și pentru fabricarea gabioanelor.<br /><br />SM SR EN 13450:2010",
 
-  "production_itemTitle_13":"Fracția 31,5-63",
-  "production_itemDescription_13":"Se utilizează pentru balastul de cale ferată, pentru drenaj și pentru alte soluții inginerești. <br /><br /> SM SR EN 13450:2010",
-  "production_itemTitle_14":"Fracția 0,365*1",
-  "production_itemDescription_14":"Adaos mineral pentru beton, un tip generos de material degivrant.",
-  "production_itemTitle_15":"Fracția 1*2",
-  "production_itemDescription_15":"Adaos mineral pentru beton.",
-  "production_itemTitle_16":"Fracția 2*5",
-  "production_itemDescription_16 ":"Adaos mineral pentru beton și armarea produselor din beton.",
+  "production_itemTitle_13": "Fracția 31,5-63",
+  "production_itemDescription_13": "Se utilizează pentru balastul de cale ferată, pentru drenaj și pentru alte soluții inginerești. <br /><br /> SM SR EN 13450:2010",
+  "production_itemTitle_14": "Fracția 0,365*1",
+  "production_itemDescription_14": "Adaos mineral pentru beton, un tip generos de material degivrant.",
+  "production_itemTitle_15": "Fracția 1*2",
+  "production_itemDescription_15": "Adaos mineral pentru beton.",
+  "production_itemTitle_16": "Fracția 2*5",
+  "production_itemDescription_16 ": "Adaos mineral pentru beton și armarea produselor din beton.",
 
   "gallery_title": "Galerie foto",
   "gallery_subTitle": "Soliditate, Eleganță, Perseverență",
@@ -99,7 +99,7 @@
   "contactUs_termsAndConditions": "Termeni și condiții",
   "contactUs_submit": "Trimite",
   "contactUs_addressTitle": "Adresa:",
-  "contactUs_addressBox": "str. Cosăuți 4, MD 3000, <br /> or. Soroca, Republica Moldova <br /> <br /> e-mail: <br /> info@cariera-cosauti.md <br /> tel/fax: +373 230 20710 <br /> <br /> Secția comercială <br /> tel: +373 230 20722 <br /> <br /> Laborator <br /> tel: +373 230 20730 <br /> <br /> Contabilitate <br /> tel: +373 230 20712",
+  "contactUs_addressBox": "str. Cosăuți 4, MD 3000, <br /> or. Soroca, Republica Moldova<br /> <br /> e-mail: <br /> info@cariera-cosauti.md<br /> tel: +373 230 20710<br /> <br /> Secția comercială<br /> tel: +373 230 20722",
 
   "message_success": "Mesajul dumneavoastră a fost expediat cu success!",
   "message_error": "Eroare! Mesajul dumneavoastră nu a fost expediat."
