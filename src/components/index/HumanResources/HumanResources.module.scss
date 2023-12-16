@@ -112,18 +112,6 @@
   :global(.MuiFormLabel-root[data-shrink="false"]) {
     top: 5px;
   }
-
-  :global(.MuiInputBase-root.Mui-focused) {
-    background: rgba(33, 33, 34, 0.65);
-    backdrop-filter: blur(2px);
-  }
-}
-
-.contactFormTextField {
-  :global(.MuiInputBase-root.Mui-focused) {
-    background: rgba(33, 33, 34, 0.65);
-    backdrop-filter: blur(2px);
-  }
 }
 
 .contactFormTextFieldMobile {
@@ -245,6 +233,14 @@
 
   .sectionImage {
     height: 100%;
+  }
+
+  .contactFormTextField,
+  .contactFormInput {
+    :global(.MuiInputBase-root.Mui-focused) {
+      background: rgba(33, 33, 34, 0.65);
+      backdrop-filter: blur(2px);
+    }
   }
 }
 
