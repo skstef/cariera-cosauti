@@ -7,7 +7,6 @@ import { Production } from "@/components/index/Production/Production";
 import { Galery } from "@/components/index/Galery/Galery";
 import { Politics } from "@/components/index/Politics/Politics";
 import { ResourcesAvailability } from "@/components/index/ResourcesAvailability/ResourcesAvailability";
-import { Certificates } from "@/components/index/Certificates/Certificates";
 import { Parteners } from "@/components/index/Parteners/Parteners";
 import { ContactUs } from "@/components/index/ContactUs/ContactUs";
 import { HumanResources } from "@/components/index/HumanResources/HumanResources";
@@ -31,7 +30,7 @@ const IndexPage = () => {
         <Galery />
         <Politics />
         <ResourcesAvailability />
-        <Certificates />
+        {/* <Certificates /> */}
         <HumanResources />
         <Parteners />
         <ContactUs />
